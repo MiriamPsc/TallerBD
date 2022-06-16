@@ -1,0 +1,2010 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="InstitutoDeInvestigacionModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Beneficiario">
+    <Key>
+      <PropertyRef Name="idBeneficiario" />
+    </Key>
+    <Property Name="idBeneficiario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="rfc" Type="char" MaxLength="13" />
+    <Property Name="estatus" Type="bit" />
+    <Property Name="idUsuarioCrea" Type="int" />
+    <Property Name="fechaCrea" Type="datetime" />
+    <Property Name="idUsuarioModifica" Type="int" />
+    <Property Name="fechaModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Caso">
+    <Key>
+      <PropertyRef Name="idCaso" />
+    </Key>
+    <Property Name="idCaso" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codigo" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="estado" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="fechaInicio" Type="datetime" Nullable="false" />
+    <Property Name="fechaCierre" Type="datetime" />
+    <Property Name="idEquipo" Type="int" Nullable="false" />
+    <Property Name="idEspecialidad" Type="int" Nullable="false" />
+    <Property Name="estatus" Type="bit" />
+    <Property Name="idUsuarioCrea" Type="int" />
+    <Property Name="fechaCrea" Type="datetime" />
+    <Property Name="idUsuarioModifica" Type="int" />
+    <Property Name="fechaModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Certificado">
+    <Key>
+      <PropertyRef Name="idCertificado" />
+    </Key>
+    <Property Name="idCertificado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codigo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="idInstitucion" Type="int" Nullable="false" />
+    <Property Name="fecha" Type="datetime" Nullable="false" />
+    <Property Name="ciudad" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="pais" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="idTipoCertificado" Type="int" Nullable="false" />
+    <Property Name="idEmpleado" Type="int" Nullable="false" />
+    <Property Name="estatus" Type="bit" />
+    <Property Name="idUsuarioCrea" Type="int" />
+    <Property Name="fechaCrea" Type="datetime" />
+    <Property Name="idUsuarioModifica" Type="int" />
+    <Property Name="fechaModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Departamento">
+    <Key>
+      <PropertyRef Name="idDepartamento" />
+    </Key>
+    <Property Name="idDepartamento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="estatus" Type="bit" />
+    <Property Name="idUsuarioCrea" Type="int" />
+    <Property Name="fechaCrea" Type="datetime" />
+    <Property Name="idUsuarioModifica" Type="int" />
+    <Property Name="fechaModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DepartamentoReactivo">
+    <Key>
+      <PropertyRef Name="idDepartamentoReactivo" />
+    </Key>
+    <Property Name="idDepartamentoReactivo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idDepartamento" Type="int" Nullable="false" />
+    <Property Name="idReactivo" Type="int" Nullable="false" />
+    <Property Name="lote" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="codigo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="fechaEmpaque" Type="datetime" Nullable="false" />
+    <Property Name="fechaCaducidad" Type="datetime" Nullable="false" />
+    <Property Name="estatus" Type="bit" />
+    <Property Name="idUsuarioCrea" Type="int" />
+    <Property Name="fechaCrea" Type="datetime" />
+    <Property Name="idUsuarioModifica" Type="int" />
+    <Property Name="fechaModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Donacion">
+    <Key>
+      <PropertyRef Name="idDonacion" />
+    </Key>
+    <Property Name="idDonacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fecha" Type="datetime" Nullable="false" />
+    <Property Name="valor" Type="int" Nullable="false" />
+    <Property Name="idBeneficiario" Type="int" Nullable="false" />
+    <Property Name="estatus" Type="bit" />
+    <Property Name="idUsuarioCrea" Type="int" />
+    <Property Name="fechaCrea" Type="datetime" />
+    <Property Name="idUsuarioModifica" Type="int" />
+    <Property Name="fechaModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DonacionInstitucion">
+    <Key>
+      <PropertyRef Name="idDonacionInstitucion" />
+    </Key>
+    <Property Name="idDonacionInstitucion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idDonacion" Type="int" Nullable="false" />
+    <Property Name="idInstitucion" Type="int" Nullable="false" />
+    <Property Name="estatus" Type="bit" />
+    <Property Name="idUsuarioCrea" Type="int" />
+    <Property Name="fechaCrea" Type="datetime" />
+    <Property Name="idUsuarioModifica" Type="int" />
+    <Property Name="fechaModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Empleado">
+    <Key>
+      <PropertyRef Name="idEmpleado" />
+    </Key>
+    <Property Name="idEmpleado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="numero" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="apellidoPaterno" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="apellidoMaterno" Type="varchar" MaxLength="50" />
+    <Property Name="genero" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="ciudad" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="pais" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="fechaNacimiento" Type="datetime" Nullable="false" />
+    <Property Name="rfc" Type="char" MaxLength="13" Nullable="false" />
+    <Property Name="dni" Type="char" MaxLength="13" Nullable="false" />
+    <Property Name="idTipoEmpleado" Type="int" Nullable="false" />
+    <Property Name="estatus" Type="bit" />
+    <Property Name="idUsuarioCrea" Type="int" />
+    <Property Name="fechaCrea" Type="datetime" />
+    <Property Name="idUsuarioModifica" Type="int" />
+    <Property Name="fechaModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="EmpleadoEquipo">
+    <Key>
+      <PropertyRef Name="idEmpleadoEquipo" />
+    </Key>
+    <Property Name="idEmpleadoEquipo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idEmpleado" Type="int" Nullable="false" />
+    <Property Name="idEquipo" Type="int" Nullable="false" />
+    <Property Name="estatus" Type="bit" />
+    <Property Name="idUsuarioCrea" Type="int" />
+    <Property Name="fechaCrea" Type="datetime" />
+    <Property Name="idUsuarioModifica" Type="int" />
+    <Property Name="fechaModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="EmpleadoEspecialidad">
+    <Key>
+      <PropertyRef Name="idEmpleadoEspecialidad" />
+    </Key>
+    <Property Name="idEmpleadoEspecialidad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idEmpleado" Type="int" Nullable="false" />
+    <Property Name="idEspecialidad" Type="int" Nullable="false" />
+    <Property Name="estatus" Type="bit" />
+    <Property Name="idUsuarioCrea" Type="int" />
+    <Property Name="fechaCrea" Type="datetime" />
+    <Property Name="idUsuarioModifica" Type="int" />
+    <Property Name="fechaModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="EmpleadoInstitucion">
+    <Key>
+      <PropertyRef Name="idEmpleadoInstitucion" />
+    </Key>
+    <Property Name="idEmpleadoInstitucion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idEmpleado" Type="int" Nullable="false" />
+    <Property Name="idInstitucion" Type="int" Nullable="false" />
+    <Property Name="fechaInicio" Type="datetime" Nullable="false" />
+    <Property Name="fechaFinal" Type="datetime" />
+    <Property Name="estatus" Type="bit" />
+    <Property Name="idUsuarioCrea" Type="int" />
+    <Property Name="fechaCrea" Type="datetime" />
+    <Property Name="idUsuarioModifica" Type="int" />
+    <Property Name="fechaModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Equipo">
+    <Key>
+      <PropertyRef Name="idEquipo" />
+    </Key>
+    <Property Name="idEquipo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codigo" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="estatus" Type="bit" />
+    <Property Name="idUsuarioCrea" Type="int" />
+    <Property Name="fechaCrea" Type="datetime" />
+    <Property Name="idUsuarioModifica" Type="int" />
+    <Property Name="fechaModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Especialidad">
+    <Key>
+      <PropertyRef Name="idEspecialidad" />
+    </Key>
+    <Property Name="idEspecialidad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="idDepartamento" Type="int" Nullable="false" />
+    <Property Name="estatus" Type="bit" />
+    <Property Name="idUsuarioCrea" Type="int" />
+    <Property Name="fechaCrea" Type="datetime" />
+    <Property Name="idUsuarioModifica" Type="int" />
+    <Property Name="fechaModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Institucion">
+    <Key>
+      <PropertyRef Name="idInstitucion" />
+    </Key>
+    <Property Name="idInstitucion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="codigo" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="ciudad" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="pais" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="idTipoInstitucion" Type="int" Nullable="false" />
+    <Property Name="estatus" Type="bit" />
+    <Property Name="idUsuarioCrea" Type="int" />
+    <Property Name="fechaCrea" Type="datetime" />
+    <Property Name="idUsuarioModifica" Type="int" />
+    <Property Name="fechaModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="InstitucionEducativa">
+    <Key>
+      <PropertyRef Name="idInstitucionEducativa" />
+    </Key>
+    <Property Name="idInstitucionEducativa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ciudad" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="estado" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="pais" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="estatus" Type="bit" />
+    <Property Name="idUsuarioCrea" Type="int" />
+    <Property Name="fechaCrea" Type="datetime" />
+    <Property Name="idUsuarioModifica" Type="int" />
+    <Property Name="fechaModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Instrumento">
+    <Key>
+      <PropertyRef Name="idInstrumento" />
+    </Key>
+    <Property Name="idInstrumento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codigo" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="idTipoInstrumento" Type="int" Nullable="false" />
+    <Property Name="idDepartamento" Type="int" Nullable="false" />
+    <Property Name="estatus" Type="bit" />
+    <Property Name="idUsuarioCrea" Type="int" />
+    <Property Name="fechaCrea" Type="datetime" />
+    <Property Name="idUsuarioModifica" Type="int" />
+    <Property Name="fechaModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Mobiliario">
+    <Key>
+      <PropertyRef Name="idMobiliario" />
+    </Key>
+    <Property Name="idMobiliario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codigo" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="idTipoMobiliario" Type="int" Nullable="false" />
+    <Property Name="idDepartamento" Type="int" Nullable="false" />
+    <Property Name="estatus" Type="bit" />
+    <Property Name="idUsuarioCrea" Type="int" />
+    <Property Name="fechaCrea" Type="datetime" />
+    <Property Name="idUsuarioModifica" Type="int" />
+    <Property Name="fechaModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Pase">
+    <Key>
+      <PropertyRef Name="idPase" />
+    </Key>
+    <Property Name="idPase" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codigo" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="fechaInicio" Type="datetime" Nullable="false" />
+    <Property Name="fechaFinal" Type="datetime" Nullable="false" />
+    <Property Name="idTipoPase" Type="int" Nullable="false" />
+    <Property Name="idInstitucion" Type="int" Nullable="false" />
+    <Property Name="estatus" Type="bit" />
+    <Property Name="idUsuarioCrea" Type="int" />
+    <Property Name="fechaCrea" Type="datetime" />
+    <Property Name="idUsuarioModifica" Type="int" />
+    <Property Name="fechaModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Reactivo">
+    <Key>
+      <PropertyRef Name="idReactivo" />
+    </Key>
+    <Property Name="idReactivo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="formula" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="tipo" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="estatus" Type="bit" />
+    <Property Name="idUsuarioCrea" Type="int" />
+    <Property Name="fechaCrea" Type="datetime" />
+    <Property Name="idUsuarioModifica" Type="int" />
+    <Property Name="fechaModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Reporte">
+    <Key>
+      <PropertyRef Name="idReporte" />
+    </Key>
+    <Property Name="idReporte" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codigo" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="idCaso" Type="int" Nullable="false" />
+    <Property Name="fechaEntrega" Type="datetime" Nullable="false" />
+    <Property Name="idEmpleadoEntrega" Type="int" Nullable="false" />
+    <Property Name="idEmpleadoRecibe" Type="int" Nullable="false" />
+    <Property Name="estatus" Type="bit" />
+    <Property Name="idUsuarioCrea" Type="int" />
+    <Property Name="fechaCrea" Type="datetime" />
+    <Property Name="idUsuarioModifica" Type="int" />
+    <Property Name="fechaModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TipoCertificado">
+    <Key>
+      <PropertyRef Name="idTipoCertificado" />
+    </Key>
+    <Property Name="idTipoCertificado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="estatus" Type="bit" />
+    <Property Name="idUsuarioCrea" Type="int" />
+    <Property Name="fechaCrea" Type="datetime" />
+    <Property Name="idUsuarioModifica" Type="int" />
+    <Property Name="fechaModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TipoEmpleado">
+    <Key>
+      <PropertyRef Name="idTipoEmpleado" />
+    </Key>
+    <Property Name="idTipoEmpleado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="sueldoBase" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="estatus" Type="bit" />
+    <Property Name="idUsuarioCrea" Type="int" />
+    <Property Name="fechaCrea" Type="datetime" />
+    <Property Name="idUsuarioModifica" Type="int" />
+    <Property Name="fechaModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TipoInstitucion">
+    <Key>
+      <PropertyRef Name="idTipoInstitucion" />
+    </Key>
+    <Property Name="idTipoInstitucion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="estatus" Type="bit" />
+    <Property Name="idUsuarioCrea" Type="int" />
+    <Property Name="fechaCrea" Type="datetime" />
+    <Property Name="idUsuarioModifica" Type="int" />
+    <Property Name="fechaModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TipoInstrumento">
+    <Key>
+      <PropertyRef Name="idTipoInstrumento" />
+    </Key>
+    <Property Name="idTipoInstrumento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="estatus" Type="bit" />
+    <Property Name="idUsuarioCrea" Type="int" />
+    <Property Name="fechaCrea" Type="datetime" />
+    <Property Name="idUsuarioModifica" Type="int" />
+    <Property Name="fechaModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TipoMobiliario">
+    <Key>
+      <PropertyRef Name="idTipoMobiliario" />
+    </Key>
+    <Property Name="idTipoMobiliario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="estatus" Type="bit" />
+    <Property Name="idUsuarioCrea" Type="int" />
+    <Property Name="fechaCrea" Type="datetime" />
+    <Property Name="idUsuarioModifica" Type="int" />
+    <Property Name="fechaModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TipoPase">
+    <Key>
+      <PropertyRef Name="idTipoPase" />
+    </Key>
+    <Property Name="idTipoPase" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="estatus" Type="bit" />
+    <Property Name="idUsuarioCrea" Type="int" />
+    <Property Name="fechaCrea" Type="datetime" />
+    <Property Name="idUsuarioModifica" Type="int" />
+    <Property Name="fechaModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TipoVisita">
+    <Key>
+      <PropertyRef Name="idTipoVisita" />
+    </Key>
+    <Property Name="idTipoVisita" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="estatus" Type="bit" />
+    <Property Name="idUsuarioCrea" Type="int" />
+    <Property Name="fechaCrea" Type="datetime" />
+    <Property Name="idUsuarioModifica" Type="int" />
+    <Property Name="fechaModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="idUsuario" />
+    </Key>
+    <Property Name="idUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="apellidoPaterno" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="apellidoMaterno" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="correo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="clave" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="estatus" Type="bit" />
+    <Property Name="idUsuarioCrea" Type="int" />
+    <Property Name="fechaCrea" Type="datetime" />
+    <Property Name="idUsuarioModifica" Type="int" />
+    <Property Name="fechaModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Visita">
+    <Key>
+      <PropertyRef Name="idVisita" />
+    </Key>
+    <Property Name="idVisita" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codigo" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="fecha" Type="datetime" Nullable="false" />
+    <Property Name="idTipoVisita" Type="int" Nullable="false" />
+    <Property Name="idVisitante" Type="int" Nullable="false" />
+    <Property Name="idPase" Type="int" Nullable="false" />
+    <Property Name="estatus" Type="bit" />
+    <Property Name="idUsuarioCrea" Type="int" />
+    <Property Name="fechaCrea" Type="datetime" />
+    <Property Name="idUsuarioModifica" Type="int" />
+    <Property Name="fechaModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Visitante">
+    <Key>
+      <PropertyRef Name="idVisitante" />
+    </Key>
+    <Property Name="idVisitante" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="apellidoPaterno" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="apellidoMaterno" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="correo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="telefono" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="fechaNacimiento" Type="datetime" Nullable="false" />
+    <Property Name="dni" Type="char" MaxLength="13" Nullable="false" />
+    <Property Name="estatus" Type="bit" />
+    <Property Name="idUsuarioCrea" Type="int" />
+    <Property Name="fechaCrea" Type="datetime" />
+    <Property Name="idUsuarioModifica" Type="int" />
+    <Property Name="fechaModifica" Type="datetime" />
+  </EntityType>
+  <Association Name="FKBeneficiarioUsuarioCrea">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Beneficiario" Type="Self.Beneficiario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Beneficiario">
+        <PropertyRef Name="idUsuarioCrea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKBeneficiarioUsuarioModifica">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Beneficiario" Type="Self.Beneficiario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Beneficiario">
+        <PropertyRef Name="idUsuarioModifica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKCasoEquipo">
+    <End Role="Equipo" Type="Self.Equipo" Multiplicity="1" />
+    <End Role="Caso" Type="Self.Caso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Equipo">
+        <PropertyRef Name="idEquipo" />
+      </Principal>
+      <Dependent Role="Caso">
+        <PropertyRef Name="idEquipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKCasoEspecialidad">
+    <End Role="Especialidad" Type="Self.Especialidad" Multiplicity="1" />
+    <End Role="Caso" Type="Self.Caso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Especialidad">
+        <PropertyRef Name="idEspecialidad" />
+      </Principal>
+      <Dependent Role="Caso">
+        <PropertyRef Name="idEspecialidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKCasoUsuarioCrea">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Caso" Type="Self.Caso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Caso">
+        <PropertyRef Name="idUsuarioCrea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKCasoUsuarioModifica">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Caso" Type="Self.Caso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Caso">
+        <PropertyRef Name="idUsuarioModifica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKCertificadoEmpleado">
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
+    <End Role="Certificado" Type="Self.Certificado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="idEmpleado" />
+      </Principal>
+      <Dependent Role="Certificado">
+        <PropertyRef Name="idEmpleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKCertificadoInstitucionEducativa">
+    <End Role="InstitucionEducativa" Type="Self.InstitucionEducativa" Multiplicity="1" />
+    <End Role="Certificado" Type="Self.Certificado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InstitucionEducativa">
+        <PropertyRef Name="idInstitucionEducativa" />
+      </Principal>
+      <Dependent Role="Certificado">
+        <PropertyRef Name="idInstitucion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKCertificadoTipoCertificado">
+    <End Role="TipoCertificado" Type="Self.TipoCertificado" Multiplicity="1" />
+    <End Role="Certificado" Type="Self.Certificado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoCertificado">
+        <PropertyRef Name="idTipoCertificado" />
+      </Principal>
+      <Dependent Role="Certificado">
+        <PropertyRef Name="idTipoCertificado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKCertificadoUsuarioCrea">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Certificado" Type="Self.Certificado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Certificado">
+        <PropertyRef Name="idUsuarioCrea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKCertificadoUsuarioModifica">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Certificado" Type="Self.Certificado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Certificado">
+        <PropertyRef Name="idUsuarioModifica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKDepartamentoReactivoDepartamento">
+    <End Role="Departamento" Type="Self.Departamento" Multiplicity="1" />
+    <End Role="DepartamentoReactivo" Type="Self.DepartamentoReactivo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamento">
+        <PropertyRef Name="idDepartamento" />
+      </Principal>
+      <Dependent Role="DepartamentoReactivo">
+        <PropertyRef Name="idDepartamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKDepartamentoReactivoReactivo">
+    <End Role="Reactivo" Type="Self.Reactivo" Multiplicity="1" />
+    <End Role="DepartamentoReactivo" Type="Self.DepartamentoReactivo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Reactivo">
+        <PropertyRef Name="idReactivo" />
+      </Principal>
+      <Dependent Role="DepartamentoReactivo">
+        <PropertyRef Name="idReactivo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKDepartamentoReactivoUsuarioCrea">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="DepartamentoReactivo" Type="Self.DepartamentoReactivo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="DepartamentoReactivo">
+        <PropertyRef Name="idUsuarioCrea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKDepartamentoReactivoUsuarioModifica">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="DepartamentoReactivo" Type="Self.DepartamentoReactivo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="DepartamentoReactivo">
+        <PropertyRef Name="idUsuarioModifica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKDepartamentoUsuarioCrea">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Departamento" Type="Self.Departamento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Departamento">
+        <PropertyRef Name="idUsuarioCrea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKDepartamentoUsuarioModifica">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Departamento" Type="Self.Departamento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Departamento">
+        <PropertyRef Name="idUsuarioModifica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKDonacionBeneficiario">
+    <End Role="Beneficiario" Type="Self.Beneficiario" Multiplicity="1" />
+    <End Role="Donacion" Type="Self.Donacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Beneficiario">
+        <PropertyRef Name="idBeneficiario" />
+      </Principal>
+      <Dependent Role="Donacion">
+        <PropertyRef Name="idBeneficiario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKDonacionInstitucionDonacion">
+    <End Role="Donacion" Type="Self.Donacion" Multiplicity="1" />
+    <End Role="DonacionInstitucion" Type="Self.DonacionInstitucion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Donacion">
+        <PropertyRef Name="idDonacion" />
+      </Principal>
+      <Dependent Role="DonacionInstitucion">
+        <PropertyRef Name="idDonacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKDonacionInstitucionInstitucion">
+    <End Role="Institucion" Type="Self.Institucion" Multiplicity="1" />
+    <End Role="DonacionInstitucion" Type="Self.DonacionInstitucion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Institucion">
+        <PropertyRef Name="idInstitucion" />
+      </Principal>
+      <Dependent Role="DonacionInstitucion">
+        <PropertyRef Name="idInstitucion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKDonacionInstitucionUsuarioCrea">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="DonacionInstitucion" Type="Self.DonacionInstitucion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="DonacionInstitucion">
+        <PropertyRef Name="idUsuarioCrea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKDonacionInstitucionUsuarioModifica">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="DonacionInstitucion" Type="Self.DonacionInstitucion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="DonacionInstitucion">
+        <PropertyRef Name="idUsuarioModifica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKDonacionUsuarioCrea">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Donacion" Type="Self.Donacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Donacion">
+        <PropertyRef Name="idUsuarioCrea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKDonacionUsuarioModifica">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Donacion" Type="Self.Donacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Donacion">
+        <PropertyRef Name="idUsuarioModifica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKEmpleadoEquipoEmpleado">
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
+    <End Role="EmpleadoEquipo" Type="Self.EmpleadoEquipo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="idEmpleado" />
+      </Principal>
+      <Dependent Role="EmpleadoEquipo">
+        <PropertyRef Name="idEmpleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKEmpleadoEquipoEquipo">
+    <End Role="Equipo" Type="Self.Equipo" Multiplicity="1" />
+    <End Role="EmpleadoEquipo" Type="Self.EmpleadoEquipo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Equipo">
+        <PropertyRef Name="idEquipo" />
+      </Principal>
+      <Dependent Role="EmpleadoEquipo">
+        <PropertyRef Name="idEquipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKEmpleadoEquipoUsuarioCrea">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="EmpleadoEquipo" Type="Self.EmpleadoEquipo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="EmpleadoEquipo">
+        <PropertyRef Name="idUsuarioCrea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKEmpleadoEquipoUsuarioModifica">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="EmpleadoEquipo" Type="Self.EmpleadoEquipo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="EmpleadoEquipo">
+        <PropertyRef Name="idUsuarioModifica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKEmpleadoEspecialidadEmpleado">
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
+    <End Role="EmpleadoEspecialidad" Type="Self.EmpleadoEspecialidad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="idEmpleado" />
+      </Principal>
+      <Dependent Role="EmpleadoEspecialidad">
+        <PropertyRef Name="idEmpleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKEmpleadoEspecialidadEspecialidad">
+    <End Role="Especialidad" Type="Self.Especialidad" Multiplicity="1" />
+    <End Role="EmpleadoEspecialidad" Type="Self.EmpleadoEspecialidad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Especialidad">
+        <PropertyRef Name="idEspecialidad" />
+      </Principal>
+      <Dependent Role="EmpleadoEspecialidad">
+        <PropertyRef Name="idEspecialidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKEmpleadoEspecialidadUsuarioCrea">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="EmpleadoEspecialidad" Type="Self.EmpleadoEspecialidad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="EmpleadoEspecialidad">
+        <PropertyRef Name="idUsuarioCrea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKEmpleadoEspecialidadUsuarioModifica">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="EmpleadoEspecialidad" Type="Self.EmpleadoEspecialidad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="EmpleadoEspecialidad">
+        <PropertyRef Name="idUsuarioModifica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKEmpleadoInstitucionEmpleado">
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
+    <End Role="EmpleadoInstitucion" Type="Self.EmpleadoInstitucion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="idEmpleado" />
+      </Principal>
+      <Dependent Role="EmpleadoInstitucion">
+        <PropertyRef Name="idEmpleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKEmpleadoInstitucionInstitucion">
+    <End Role="Institucion" Type="Self.Institucion" Multiplicity="1" />
+    <End Role="EmpleadoInstitucion" Type="Self.EmpleadoInstitucion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Institucion">
+        <PropertyRef Name="idInstitucion" />
+      </Principal>
+      <Dependent Role="EmpleadoInstitucion">
+        <PropertyRef Name="idInstitucion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKEmpleadoInstitucionUsuarioCrea">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="EmpleadoInstitucion" Type="Self.EmpleadoInstitucion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="EmpleadoInstitucion">
+        <PropertyRef Name="idUsuarioCrea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKEmpleadoInstitucionUsuarioModifica">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="EmpleadoInstitucion" Type="Self.EmpleadoInstitucion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="EmpleadoInstitucion">
+        <PropertyRef Name="idUsuarioModifica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKEmpleadoTipoEmpleado">
+    <End Role="TipoEmpleado" Type="Self.TipoEmpleado" Multiplicity="1" />
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoEmpleado">
+        <PropertyRef Name="idTipoEmpleado" />
+      </Principal>
+      <Dependent Role="Empleado">
+        <PropertyRef Name="idTipoEmpleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKEmpleadoUsuarioCrea">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Empleado">
+        <PropertyRef Name="idUsuarioCrea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKEmpleadoUsuarioModifica">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Empleado">
+        <PropertyRef Name="idUsuarioModifica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKEquipoUsuarioCrea">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Equipo" Type="Self.Equipo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Equipo">
+        <PropertyRef Name="idUsuarioCrea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKEquipoUsuarioModifica">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Equipo" Type="Self.Equipo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Equipo">
+        <PropertyRef Name="idUsuarioModifica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKEspecialidadDepartamento">
+    <End Role="Departamento" Type="Self.Departamento" Multiplicity="1" />
+    <End Role="Especialidad" Type="Self.Especialidad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamento">
+        <PropertyRef Name="idDepartamento" />
+      </Principal>
+      <Dependent Role="Especialidad">
+        <PropertyRef Name="idDepartamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKEspecialidadUsuarioCrea">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Especialidad" Type="Self.Especialidad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Especialidad">
+        <PropertyRef Name="idUsuarioCrea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKEspecialidadUsuarioModifica">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Especialidad" Type="Self.Especialidad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Especialidad">
+        <PropertyRef Name="idUsuarioModifica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKInstitucionEducativaUsuarioCrea">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="InstitucionEducativa" Type="Self.InstitucionEducativa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="InstitucionEducativa">
+        <PropertyRef Name="idUsuarioCrea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKInstitucionEducativaUsuarioModifica">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="InstitucionEducativa" Type="Self.InstitucionEducativa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="InstitucionEducativa">
+        <PropertyRef Name="idUsuarioModifica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKInstitucionTipoInstitucion">
+    <End Role="TipoInstitucion" Type="Self.TipoInstitucion" Multiplicity="1" />
+    <End Role="Institucion" Type="Self.Institucion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoInstitucion">
+        <PropertyRef Name="idTipoInstitucion" />
+      </Principal>
+      <Dependent Role="Institucion">
+        <PropertyRef Name="idTipoInstitucion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKInstitucionUsuarioCrea">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Institucion" Type="Self.Institucion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Institucion">
+        <PropertyRef Name="idUsuarioCrea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKInstitucionUsuarioModifica">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Institucion" Type="Self.Institucion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Institucion">
+        <PropertyRef Name="idUsuarioModifica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKInstrumentoDepartamento">
+    <End Role="Departamento" Type="Self.Departamento" Multiplicity="1" />
+    <End Role="Instrumento" Type="Self.Instrumento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamento">
+        <PropertyRef Name="idDepartamento" />
+      </Principal>
+      <Dependent Role="Instrumento">
+        <PropertyRef Name="idDepartamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKInstrumentoTipoInstrumento">
+    <End Role="TipoInstrumento" Type="Self.TipoInstrumento" Multiplicity="1" />
+    <End Role="Instrumento" Type="Self.Instrumento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoInstrumento">
+        <PropertyRef Name="idTipoInstrumento" />
+      </Principal>
+      <Dependent Role="Instrumento">
+        <PropertyRef Name="idTipoInstrumento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKInstrumentoUsuarioCrea">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Instrumento" Type="Self.Instrumento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Instrumento">
+        <PropertyRef Name="idUsuarioCrea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKInstrumentoUsuarioModifica">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Instrumento" Type="Self.Instrumento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Instrumento">
+        <PropertyRef Name="idUsuarioModifica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKMobiliarioDepartamento">
+    <End Role="Departamento" Type="Self.Departamento" Multiplicity="1" />
+    <End Role="Mobiliario" Type="Self.Mobiliario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamento">
+        <PropertyRef Name="idDepartamento" />
+      </Principal>
+      <Dependent Role="Mobiliario">
+        <PropertyRef Name="idDepartamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKMobiliarioTipoMobiliario">
+    <End Role="TipoMobiliario" Type="Self.TipoMobiliario" Multiplicity="1" />
+    <End Role="Mobiliario" Type="Self.Mobiliario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoMobiliario">
+        <PropertyRef Name="idTipoMobiliario" />
+      </Principal>
+      <Dependent Role="Mobiliario">
+        <PropertyRef Name="idTipoMobiliario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKMobiliarioUsuarioCrea">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Mobiliario" Type="Self.Mobiliario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Mobiliario">
+        <PropertyRef Name="idUsuarioCrea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKMobiliarioUsuarioModifica">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Mobiliario" Type="Self.Mobiliario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Mobiliario">
+        <PropertyRef Name="idUsuarioModifica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKPaseInstitucion">
+    <End Role="Institucion" Type="Self.Institucion" Multiplicity="1" />
+    <End Role="Pase" Type="Self.Pase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Institucion">
+        <PropertyRef Name="idInstitucion" />
+      </Principal>
+      <Dependent Role="Pase">
+        <PropertyRef Name="idInstitucion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKPaseTipoPase">
+    <End Role="TipoPase" Type="Self.TipoPase" Multiplicity="1" />
+    <End Role="Pase" Type="Self.Pase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoPase">
+        <PropertyRef Name="idTipoPase" />
+      </Principal>
+      <Dependent Role="Pase">
+        <PropertyRef Name="idTipoPase" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKPaseUsuarioCrea">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Pase" Type="Self.Pase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Pase">
+        <PropertyRef Name="idUsuarioCrea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKPaseUsuarioModifica">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Pase" Type="Self.Pase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Pase">
+        <PropertyRef Name="idUsuarioModifica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKReactivoUsuarioCrea">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Reactivo" Type="Self.Reactivo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Reactivo">
+        <PropertyRef Name="idUsuarioCrea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKReactivoUsuarioModifica">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Reactivo" Type="Self.Reactivo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Reactivo">
+        <PropertyRef Name="idUsuarioModifica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKReporteCaso">
+    <End Role="Caso" Type="Self.Caso" Multiplicity="1" />
+    <End Role="Reporte" Type="Self.Reporte" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Caso">
+        <PropertyRef Name="idCaso" />
+      </Principal>
+      <Dependent Role="Reporte">
+        <PropertyRef Name="idCaso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKReporteEmpleadoEntrega">
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
+    <End Role="Reporte" Type="Self.Reporte" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="idEmpleado" />
+      </Principal>
+      <Dependent Role="Reporte">
+        <PropertyRef Name="idEmpleadoEntrega" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKReporteEmpleadoRecibe">
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
+    <End Role="Reporte" Type="Self.Reporte" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="idEmpleado" />
+      </Principal>
+      <Dependent Role="Reporte">
+        <PropertyRef Name="idEmpleadoRecibe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKReporteUsuarioCrea">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Reporte" Type="Self.Reporte" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Reporte">
+        <PropertyRef Name="idUsuarioCrea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKReporteUsuarioModifica">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Reporte" Type="Self.Reporte" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Reporte">
+        <PropertyRef Name="idUsuarioModifica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKTipoCertificadoUsuarioCrea">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="TipoCertificado" Type="Self.TipoCertificado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="TipoCertificado">
+        <PropertyRef Name="idUsuarioCrea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKTipoCertificadoUsuarioModifica">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="TipoCertificado" Type="Self.TipoCertificado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="TipoCertificado">
+        <PropertyRef Name="idUsuarioModifica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKTipoEmpleadoUsuarioCrea">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="TipoEmpleado" Type="Self.TipoEmpleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="TipoEmpleado">
+        <PropertyRef Name="idUsuarioCrea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKTipoEmpleadoUsuarioModifica">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="TipoEmpleado" Type="Self.TipoEmpleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="TipoEmpleado">
+        <PropertyRef Name="idUsuarioModifica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKTipoInstitucionUsuarioCrea">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="TipoInstitucion" Type="Self.TipoInstitucion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="TipoInstitucion">
+        <PropertyRef Name="idUsuarioCrea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKTipoInstitucionUsuarioModifica">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="TipoInstitucion" Type="Self.TipoInstitucion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="TipoInstitucion">
+        <PropertyRef Name="idUsuarioModifica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKTipoInstrumentoUsuarioCrea">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="TipoInstrumento" Type="Self.TipoInstrumento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="TipoInstrumento">
+        <PropertyRef Name="idUsuarioCrea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKTipoInstrumentoUsuarioModifica">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="TipoInstrumento" Type="Self.TipoInstrumento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="TipoInstrumento">
+        <PropertyRef Name="idUsuarioModifica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKTipoMobiliarioUsuarioCrea">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="TipoMobiliario" Type="Self.TipoMobiliario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="TipoMobiliario">
+        <PropertyRef Name="idUsuarioCrea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKTipoMobiliarioUsuarioModifica">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="TipoMobiliario" Type="Self.TipoMobiliario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="TipoMobiliario">
+        <PropertyRef Name="idUsuarioModifica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKTipoPaseUsuarioCrea">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="TipoPase" Type="Self.TipoPase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="TipoPase">
+        <PropertyRef Name="idUsuarioCrea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKTipoPaseUsuarioModifica">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="TipoPase" Type="Self.TipoPase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="TipoPase">
+        <PropertyRef Name="idUsuarioModifica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKTipoVisitaUsuarioCrea">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="TipoVisita" Type="Self.TipoVisita" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="TipoVisita">
+        <PropertyRef Name="idUsuarioCrea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKTipoVisitaUsuarioModifica">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="TipoVisita" Type="Self.TipoVisita" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="TipoVisita">
+        <PropertyRef Name="idUsuarioModifica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKUsuarioUsuarioCrea">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Usuario1" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Usuario1">
+        <PropertyRef Name="idUsuarioCrea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKUsuarioUsuarioModifica">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Usuario1" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Usuario1">
+        <PropertyRef Name="idUsuarioModifica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKVisitanteUsuarioCrea">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Visitante" Type="Self.Visitante" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Visitante">
+        <PropertyRef Name="idUsuarioCrea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKVisitanteUsuarioModifica">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Visitante" Type="Self.Visitante" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Visitante">
+        <PropertyRef Name="idUsuarioModifica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKVisitaPase">
+    <End Role="Pase" Type="Self.Pase" Multiplicity="1" />
+    <End Role="Visita" Type="Self.Visita" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pase">
+        <PropertyRef Name="idPase" />
+      </Principal>
+      <Dependent Role="Visita">
+        <PropertyRef Name="idPase" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKVisitaTipoVisita">
+    <End Role="TipoVisita" Type="Self.TipoVisita" Multiplicity="1" />
+    <End Role="Visita" Type="Self.Visita" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoVisita">
+        <PropertyRef Name="idTipoVisita" />
+      </Principal>
+      <Dependent Role="Visita">
+        <PropertyRef Name="idTipoVisita" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKVisitaUsuarioCrea">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Visita" Type="Self.Visita" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Visita">
+        <PropertyRef Name="idUsuarioCrea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKVisitaUsuarioModifica">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Visita" Type="Self.Visita" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Visita">
+        <PropertyRef Name="idUsuarioModifica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKVisitaVisitante">
+    <End Role="Visitante" Type="Self.Visitante" Multiplicity="1" />
+    <End Role="Visita" Type="Self.Visita" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Visitante">
+        <PropertyRef Name="idVisitante" />
+      </Principal>
+      <Dependent Role="Visita">
+        <PropertyRef Name="idVisitante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="BeneficiarioDonacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idBen" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DonacionesOrden" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="EmpleadoAños" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idEmpInsti" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EmpleadoPuesto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="EmpleadoSelectOrden" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="MaximaDonacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="MinimaDonacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="PrimeraVisitaVisitante" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idVis" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ReactivoSemanas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idDepReac" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SelectBeneficiario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectCaso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectCertificado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectDepartamento" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectDepartamentoReactivo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectDonación" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectDonacionInstitucion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectEmpleado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectEmpleadoEquipo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectEmpleadoEspecialidad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectEmpleadoInstitucion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectEquipo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectEspecialidad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectInstitucion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectInstitucionEducativa" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectInstrumento" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectMobiliario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectPase" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectReactivo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectReporte" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTipoCertificado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTipoEmpleado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTipoInstitucion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTipoInstrumento" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTipoMobiliario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTipoPase" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTipoVisita" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTodoBeneficiario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTodoCaso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTodoCertificado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTodoDepartamento" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTodoDepartamentoReactivo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTodoDonacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTodoDonacionInstitucion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTodoEmpleado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTodoEmpleadoEquipo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTodoEmpleadoEspecialidad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTodoEmpleadoInstitucion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTodoEquipo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTodoEspecialidad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTodoInstitucion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTodoInstitucionEducativa" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTodoInstrumento" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTodoMobiliario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTodoPase" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTodoReactivo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTodoReporte" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTodoTipoCertificado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTodoTipoEmpleado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTodoTipoInstitucion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTodoTipoInstrumento" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTodoTipoMobiliario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTodoTipoPase" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTodoTipoVisita" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTodoUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTodoVisita" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectTodoVisitante" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectVisita" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectVisitante" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="TotalDonaciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="TotalEmpleados" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="UltimaVisitaVisitante" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idVis" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VisitantesSelectOrden" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="VisitanteVisita" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="VisitasDia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="InstitutoDeInvestigacionModelStoreContainer">
+    <EntitySet Name="Beneficiario" EntityType="Self.Beneficiario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Caso" EntityType="Self.Caso" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Certificado" EntityType="Self.Certificado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Departamento" EntityType="Self.Departamento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DepartamentoReactivo" EntityType="Self.DepartamentoReactivo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Donacion" EntityType="Self.Donacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DonacionInstitucion" EntityType="Self.DonacionInstitucion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Empleado" EntityType="Self.Empleado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmpleadoEquipo" EntityType="Self.EmpleadoEquipo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmpleadoEspecialidad" EntityType="Self.EmpleadoEspecialidad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmpleadoInstitucion" EntityType="Self.EmpleadoInstitucion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Equipo" EntityType="Self.Equipo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Especialidad" EntityType="Self.Especialidad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Institucion" EntityType="Self.Institucion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InstitucionEducativa" EntityType="Self.InstitucionEducativa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Instrumento" EntityType="Self.Instrumento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mobiliario" EntityType="Self.Mobiliario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pase" EntityType="Self.Pase" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Reactivo" EntityType="Self.Reactivo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Reporte" EntityType="Self.Reporte" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoCertificado" EntityType="Self.TipoCertificado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoEmpleado" EntityType="Self.TipoEmpleado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoInstitucion" EntityType="Self.TipoInstitucion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoInstrumento" EntityType="Self.TipoInstrumento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoMobiliario" EntityType="Self.TipoMobiliario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoPase" EntityType="Self.TipoPase" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoVisita" EntityType="Self.TipoVisita" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Visita" EntityType="Self.Visita" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Visitante" EntityType="Self.Visitante" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FKBeneficiarioUsuarioCrea" Association="Self.FKBeneficiarioUsuarioCrea">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Beneficiario" EntitySet="Beneficiario" />
+    </AssociationSet>
+    <AssociationSet Name="FKBeneficiarioUsuarioModifica" Association="Self.FKBeneficiarioUsuarioModifica">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Beneficiario" EntitySet="Beneficiario" />
+    </AssociationSet>
+    <AssociationSet Name="FKCasoEquipo" Association="Self.FKCasoEquipo">
+      <End Role="Equipo" EntitySet="Equipo" />
+      <End Role="Caso" EntitySet="Caso" />
+    </AssociationSet>
+    <AssociationSet Name="FKCasoEspecialidad" Association="Self.FKCasoEspecialidad">
+      <End Role="Especialidad" EntitySet="Especialidad" />
+      <End Role="Caso" EntitySet="Caso" />
+    </AssociationSet>
+    <AssociationSet Name="FKCasoUsuarioCrea" Association="Self.FKCasoUsuarioCrea">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Caso" EntitySet="Caso" />
+    </AssociationSet>
+    <AssociationSet Name="FKCasoUsuarioModifica" Association="Self.FKCasoUsuarioModifica">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Caso" EntitySet="Caso" />
+    </AssociationSet>
+    <AssociationSet Name="FKCertificadoEmpleado" Association="Self.FKCertificadoEmpleado">
+      <End Role="Empleado" EntitySet="Empleado" />
+      <End Role="Certificado" EntitySet="Certificado" />
+    </AssociationSet>
+    <AssociationSet Name="FKCertificadoInstitucionEducativa" Association="Self.FKCertificadoInstitucionEducativa">
+      <End Role="InstitucionEducativa" EntitySet="InstitucionEducativa" />
+      <End Role="Certificado" EntitySet="Certificado" />
+    </AssociationSet>
+    <AssociationSet Name="FKCertificadoTipoCertificado" Association="Self.FKCertificadoTipoCertificado">
+      <End Role="TipoCertificado" EntitySet="TipoCertificado" />
+      <End Role="Certificado" EntitySet="Certificado" />
+    </AssociationSet>
+    <AssociationSet Name="FKCertificadoUsuarioCrea" Association="Self.FKCertificadoUsuarioCrea">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Certificado" EntitySet="Certificado" />
+    </AssociationSet>
+    <AssociationSet Name="FKCertificadoUsuarioModifica" Association="Self.FKCertificadoUsuarioModifica">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Certificado" EntitySet="Certificado" />
+    </AssociationSet>
+    <AssociationSet Name="FKDepartamentoReactivoDepartamento" Association="Self.FKDepartamentoReactivoDepartamento">
+      <End Role="Departamento" EntitySet="Departamento" />
+      <End Role="DepartamentoReactivo" EntitySet="DepartamentoReactivo" />
+    </AssociationSet>
+    <AssociationSet Name="FKDepartamentoReactivoReactivo" Association="Self.FKDepartamentoReactivoReactivo">
+      <End Role="Reactivo" EntitySet="Reactivo" />
+      <End Role="DepartamentoReactivo" EntitySet="DepartamentoReactivo" />
+    </AssociationSet>
+    <AssociationSet Name="FKDepartamentoReactivoUsuarioCrea" Association="Self.FKDepartamentoReactivoUsuarioCrea">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="DepartamentoReactivo" EntitySet="DepartamentoReactivo" />
+    </AssociationSet>
+    <AssociationSet Name="FKDepartamentoReactivoUsuarioModifica" Association="Self.FKDepartamentoReactivoUsuarioModifica">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="DepartamentoReactivo" EntitySet="DepartamentoReactivo" />
+    </AssociationSet>
+    <AssociationSet Name="FKDepartamentoUsuarioCrea" Association="Self.FKDepartamentoUsuarioCrea">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Departamento" EntitySet="Departamento" />
+    </AssociationSet>
+    <AssociationSet Name="FKDepartamentoUsuarioModifica" Association="Self.FKDepartamentoUsuarioModifica">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Departamento" EntitySet="Departamento" />
+    </AssociationSet>
+    <AssociationSet Name="FKDonacionBeneficiario" Association="Self.FKDonacionBeneficiario">
+      <End Role="Beneficiario" EntitySet="Beneficiario" />
+      <End Role="Donacion" EntitySet="Donacion" />
+    </AssociationSet>
+    <AssociationSet Name="FKDonacionInstitucionDonacion" Association="Self.FKDonacionInstitucionDonacion">
+      <End Role="Donacion" EntitySet="Donacion" />
+      <End Role="DonacionInstitucion" EntitySet="DonacionInstitucion" />
+    </AssociationSet>
+    <AssociationSet Name="FKDonacionInstitucionInstitucion" Association="Self.FKDonacionInstitucionInstitucion">
+      <End Role="Institucion" EntitySet="Institucion" />
+      <End Role="DonacionInstitucion" EntitySet="DonacionInstitucion" />
+    </AssociationSet>
+    <AssociationSet Name="FKDonacionInstitucionUsuarioCrea" Association="Self.FKDonacionInstitucionUsuarioCrea">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="DonacionInstitucion" EntitySet="DonacionInstitucion" />
+    </AssociationSet>
+    <AssociationSet Name="FKDonacionInstitucionUsuarioModifica" Association="Self.FKDonacionInstitucionUsuarioModifica">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="DonacionInstitucion" EntitySet="DonacionInstitucion" />
+    </AssociationSet>
+    <AssociationSet Name="FKDonacionUsuarioCrea" Association="Self.FKDonacionUsuarioCrea">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Donacion" EntitySet="Donacion" />
+    </AssociationSet>
+    <AssociationSet Name="FKDonacionUsuarioModifica" Association="Self.FKDonacionUsuarioModifica">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Donacion" EntitySet="Donacion" />
+    </AssociationSet>
+    <AssociationSet Name="FKEmpleadoEquipoEmpleado" Association="Self.FKEmpleadoEquipoEmpleado">
+      <End Role="Empleado" EntitySet="Empleado" />
+      <End Role="EmpleadoEquipo" EntitySet="EmpleadoEquipo" />
+    </AssociationSet>
+    <AssociationSet Name="FKEmpleadoEquipoEquipo" Association="Self.FKEmpleadoEquipoEquipo">
+      <End Role="Equipo" EntitySet="Equipo" />
+      <End Role="EmpleadoEquipo" EntitySet="EmpleadoEquipo" />
+    </AssociationSet>
+    <AssociationSet Name="FKEmpleadoEquipoUsuarioCrea" Association="Self.FKEmpleadoEquipoUsuarioCrea">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="EmpleadoEquipo" EntitySet="EmpleadoEquipo" />
+    </AssociationSet>
+    <AssociationSet Name="FKEmpleadoEquipoUsuarioModifica" Association="Self.FKEmpleadoEquipoUsuarioModifica">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="EmpleadoEquipo" EntitySet="EmpleadoEquipo" />
+    </AssociationSet>
+    <AssociationSet Name="FKEmpleadoEspecialidadEmpleado" Association="Self.FKEmpleadoEspecialidadEmpleado">
+      <End Role="Empleado" EntitySet="Empleado" />
+      <End Role="EmpleadoEspecialidad" EntitySet="EmpleadoEspecialidad" />
+    </AssociationSet>
+    <AssociationSet Name="FKEmpleadoEspecialidadEspecialidad" Association="Self.FKEmpleadoEspecialidadEspecialidad">
+      <End Role="Especialidad" EntitySet="Especialidad" />
+      <End Role="EmpleadoEspecialidad" EntitySet="EmpleadoEspecialidad" />
+    </AssociationSet>
+    <AssociationSet Name="FKEmpleadoEspecialidadUsuarioCrea" Association="Self.FKEmpleadoEspecialidadUsuarioCrea">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="EmpleadoEspecialidad" EntitySet="EmpleadoEspecialidad" />
+    </AssociationSet>
+    <AssociationSet Name="FKEmpleadoEspecialidadUsuarioModifica" Association="Self.FKEmpleadoEspecialidadUsuarioModifica">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="EmpleadoEspecialidad" EntitySet="EmpleadoEspecialidad" />
+    </AssociationSet>
+    <AssociationSet Name="FKEmpleadoInstitucionEmpleado" Association="Self.FKEmpleadoInstitucionEmpleado">
+      <End Role="Empleado" EntitySet="Empleado" />
+      <End Role="EmpleadoInstitucion" EntitySet="EmpleadoInstitucion" />
+    </AssociationSet>
+    <AssociationSet Name="FKEmpleadoInstitucionInstitucion" Association="Self.FKEmpleadoInstitucionInstitucion">
+      <End Role="Institucion" EntitySet="Institucion" />
+      <End Role="EmpleadoInstitucion" EntitySet="EmpleadoInstitucion" />
+    </AssociationSet>
+    <AssociationSet Name="FKEmpleadoInstitucionUsuarioCrea" Association="Self.FKEmpleadoInstitucionUsuarioCrea">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="EmpleadoInstitucion" EntitySet="EmpleadoInstitucion" />
+    </AssociationSet>
+    <AssociationSet Name="FKEmpleadoInstitucionUsuarioModifica" Association="Self.FKEmpleadoInstitucionUsuarioModifica">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="EmpleadoInstitucion" EntitySet="EmpleadoInstitucion" />
+    </AssociationSet>
+    <AssociationSet Name="FKEmpleadoTipoEmpleado" Association="Self.FKEmpleadoTipoEmpleado">
+      <End Role="TipoEmpleado" EntitySet="TipoEmpleado" />
+      <End Role="Empleado" EntitySet="Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="FKEmpleadoUsuarioCrea" Association="Self.FKEmpleadoUsuarioCrea">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Empleado" EntitySet="Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="FKEmpleadoUsuarioModifica" Association="Self.FKEmpleadoUsuarioModifica">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Empleado" EntitySet="Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="FKEquipoUsuarioCrea" Association="Self.FKEquipoUsuarioCrea">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Equipo" EntitySet="Equipo" />
+    </AssociationSet>
+    <AssociationSet Name="FKEquipoUsuarioModifica" Association="Self.FKEquipoUsuarioModifica">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Equipo" EntitySet="Equipo" />
+    </AssociationSet>
+    <AssociationSet Name="FKEspecialidadDepartamento" Association="Self.FKEspecialidadDepartamento">
+      <End Role="Departamento" EntitySet="Departamento" />
+      <End Role="Especialidad" EntitySet="Especialidad" />
+    </AssociationSet>
+    <AssociationSet Name="FKEspecialidadUsuarioCrea" Association="Self.FKEspecialidadUsuarioCrea">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Especialidad" EntitySet="Especialidad" />
+    </AssociationSet>
+    <AssociationSet Name="FKEspecialidadUsuarioModifica" Association="Self.FKEspecialidadUsuarioModifica">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Especialidad" EntitySet="Especialidad" />
+    </AssociationSet>
+    <AssociationSet Name="FKInstitucionEducativaUsuarioCrea" Association="Self.FKInstitucionEducativaUsuarioCrea">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="InstitucionEducativa" EntitySet="InstitucionEducativa" />
+    </AssociationSet>
+    <AssociationSet Name="FKInstitucionEducativaUsuarioModifica" Association="Self.FKInstitucionEducativaUsuarioModifica">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="InstitucionEducativa" EntitySet="InstitucionEducativa" />
+    </AssociationSet>
+    <AssociationSet Name="FKInstitucionTipoInstitucion" Association="Self.FKInstitucionTipoInstitucion">
+      <End Role="TipoInstitucion" EntitySet="TipoInstitucion" />
+      <End Role="Institucion" EntitySet="Institucion" />
+    </AssociationSet>
+    <AssociationSet Name="FKInstitucionUsuarioCrea" Association="Self.FKInstitucionUsuarioCrea">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Institucion" EntitySet="Institucion" />
+    </AssociationSet>
+    <AssociationSet Name="FKInstitucionUsuarioModifica" Association="Self.FKInstitucionUsuarioModifica">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Institucion" EntitySet="Institucion" />
+    </AssociationSet>
+    <AssociationSet Name="FKInstrumentoDepartamento" Association="Self.FKInstrumentoDepartamento">
+      <End Role="Departamento" EntitySet="Departamento" />
+      <End Role="Instrumento" EntitySet="Instrumento" />
+    </AssociationSet>
+    <AssociationSet Name="FKInstrumentoTipoInstrumento" Association="Self.FKInstrumentoTipoInstrumento">
+      <End Role="TipoInstrumento" EntitySet="TipoInstrumento" />
+      <End Role="Instrumento" EntitySet="Instrumento" />
+    </AssociationSet>
+    <AssociationSet Name="FKInstrumentoUsuarioCrea" Association="Self.FKInstrumentoUsuarioCrea">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Instrumento" EntitySet="Instrumento" />
+    </AssociationSet>
+    <AssociationSet Name="FKInstrumentoUsuarioModifica" Association="Self.FKInstrumentoUsuarioModifica">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Instrumento" EntitySet="Instrumento" />
+    </AssociationSet>
+    <AssociationSet Name="FKMobiliarioDepartamento" Association="Self.FKMobiliarioDepartamento">
+      <End Role="Departamento" EntitySet="Departamento" />
+      <End Role="Mobiliario" EntitySet="Mobiliario" />
+    </AssociationSet>
+    <AssociationSet Name="FKMobiliarioTipoMobiliario" Association="Self.FKMobiliarioTipoMobiliario">
+      <End Role="TipoMobiliario" EntitySet="TipoMobiliario" />
+      <End Role="Mobiliario" EntitySet="Mobiliario" />
+    </AssociationSet>
+    <AssociationSet Name="FKMobiliarioUsuarioCrea" Association="Self.FKMobiliarioUsuarioCrea">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Mobiliario" EntitySet="Mobiliario" />
+    </AssociationSet>
+    <AssociationSet Name="FKMobiliarioUsuarioModifica" Association="Self.FKMobiliarioUsuarioModifica">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Mobiliario" EntitySet="Mobiliario" />
+    </AssociationSet>
+    <AssociationSet Name="FKPaseInstitucion" Association="Self.FKPaseInstitucion">
+      <End Role="Institucion" EntitySet="Institucion" />
+      <End Role="Pase" EntitySet="Pase" />
+    </AssociationSet>
+    <AssociationSet Name="FKPaseTipoPase" Association="Self.FKPaseTipoPase">
+      <End Role="TipoPase" EntitySet="TipoPase" />
+      <End Role="Pase" EntitySet="Pase" />
+    </AssociationSet>
+    <AssociationSet Name="FKPaseUsuarioCrea" Association="Self.FKPaseUsuarioCrea">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Pase" EntitySet="Pase" />
+    </AssociationSet>
+    <AssociationSet Name="FKPaseUsuarioModifica" Association="Self.FKPaseUsuarioModifica">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Pase" EntitySet="Pase" />
+    </AssociationSet>
+    <AssociationSet Name="FKReactivoUsuarioCrea" Association="Self.FKReactivoUsuarioCrea">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Reactivo" EntitySet="Reactivo" />
+    </AssociationSet>
+    <AssociationSet Name="FKReactivoUsuarioModifica" Association="Self.FKReactivoUsuarioModifica">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Reactivo" EntitySet="Reactivo" />
+    </AssociationSet>
+    <AssociationSet Name="FKReporteCaso" Association="Self.FKReporteCaso">
+      <End Role="Caso" EntitySet="Caso" />
+      <End Role="Reporte" EntitySet="Reporte" />
+    </AssociationSet>
+    <AssociationSet Name="FKReporteEmpleadoEntrega" Association="Self.FKReporteEmpleadoEntrega">
+      <End Role="Empleado" EntitySet="Empleado" />
+      <End Role="Reporte" EntitySet="Reporte" />
+    </AssociationSet>
+    <AssociationSet Name="FKReporteEmpleadoRecibe" Association="Self.FKReporteEmpleadoRecibe">
+      <End Role="Empleado" EntitySet="Empleado" />
+      <End Role="Reporte" EntitySet="Reporte" />
+    </AssociationSet>
+    <AssociationSet Name="FKReporteUsuarioCrea" Association="Self.FKReporteUsuarioCrea">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Reporte" EntitySet="Reporte" />
+    </AssociationSet>
+    <AssociationSet Name="FKReporteUsuarioModifica" Association="Self.FKReporteUsuarioModifica">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Reporte" EntitySet="Reporte" />
+    </AssociationSet>
+    <AssociationSet Name="FKTipoCertificadoUsuarioCrea" Association="Self.FKTipoCertificadoUsuarioCrea">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="TipoCertificado" EntitySet="TipoCertificado" />
+    </AssociationSet>
+    <AssociationSet Name="FKTipoCertificadoUsuarioModifica" Association="Self.FKTipoCertificadoUsuarioModifica">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="TipoCertificado" EntitySet="TipoCertificado" />
+    </AssociationSet>
+    <AssociationSet Name="FKTipoEmpleadoUsuarioCrea" Association="Self.FKTipoEmpleadoUsuarioCrea">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="TipoEmpleado" EntitySet="TipoEmpleado" />
+    </AssociationSet>
+    <AssociationSet Name="FKTipoEmpleadoUsuarioModifica" Association="Self.FKTipoEmpleadoUsuarioModifica">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="TipoEmpleado" EntitySet="TipoEmpleado" />
+    </AssociationSet>
+    <AssociationSet Name="FKTipoInstitucionUsuarioCrea" Association="Self.FKTipoInstitucionUsuarioCrea">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="TipoInstitucion" EntitySet="TipoInstitucion" />
+    </AssociationSet>
+    <AssociationSet Name="FKTipoInstitucionUsuarioModifica" Association="Self.FKTipoInstitucionUsuarioModifica">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="TipoInstitucion" EntitySet="TipoInstitucion" />
+    </AssociationSet>
+    <AssociationSet Name="FKTipoInstrumentoUsuarioCrea" Association="Self.FKTipoInstrumentoUsuarioCrea">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="TipoInstrumento" EntitySet="TipoInstrumento" />
+    </AssociationSet>
+    <AssociationSet Name="FKTipoInstrumentoUsuarioModifica" Association="Self.FKTipoInstrumentoUsuarioModifica">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="TipoInstrumento" EntitySet="TipoInstrumento" />
+    </AssociationSet>
+    <AssociationSet Name="FKTipoMobiliarioUsuarioCrea" Association="Self.FKTipoMobiliarioUsuarioCrea">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="TipoMobiliario" EntitySet="TipoMobiliario" />
+    </AssociationSet>
+    <AssociationSet Name="FKTipoMobiliarioUsuarioModifica" Association="Self.FKTipoMobiliarioUsuarioModifica">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="TipoMobiliario" EntitySet="TipoMobiliario" />
+    </AssociationSet>
+    <AssociationSet Name="FKTipoPaseUsuarioCrea" Association="Self.FKTipoPaseUsuarioCrea">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="TipoPase" EntitySet="TipoPase" />
+    </AssociationSet>
+    <AssociationSet Name="FKTipoPaseUsuarioModifica" Association="Self.FKTipoPaseUsuarioModifica">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="TipoPase" EntitySet="TipoPase" />
+    </AssociationSet>
+    <AssociationSet Name="FKTipoVisitaUsuarioCrea" Association="Self.FKTipoVisitaUsuarioCrea">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="TipoVisita" EntitySet="TipoVisita" />
+    </AssociationSet>
+    <AssociationSet Name="FKTipoVisitaUsuarioModifica" Association="Self.FKTipoVisitaUsuarioModifica">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="TipoVisita" EntitySet="TipoVisita" />
+    </AssociationSet>
+    <AssociationSet Name="FKUsuarioUsuarioCrea" Association="Self.FKUsuarioUsuarioCrea">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Usuario1" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FKUsuarioUsuarioModifica" Association="Self.FKUsuarioUsuarioModifica">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Usuario1" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FKVisitanteUsuarioCrea" Association="Self.FKVisitanteUsuarioCrea">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Visitante" EntitySet="Visitante" />
+    </AssociationSet>
+    <AssociationSet Name="FKVisitanteUsuarioModifica" Association="Self.FKVisitanteUsuarioModifica">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Visitante" EntitySet="Visitante" />
+    </AssociationSet>
+    <AssociationSet Name="FKVisitaPase" Association="Self.FKVisitaPase">
+      <End Role="Pase" EntitySet="Pase" />
+      <End Role="Visita" EntitySet="Visita" />
+    </AssociationSet>
+    <AssociationSet Name="FKVisitaTipoVisita" Association="Self.FKVisitaTipoVisita">
+      <End Role="TipoVisita" EntitySet="TipoVisita" />
+      <End Role="Visita" EntitySet="Visita" />
+    </AssociationSet>
+    <AssociationSet Name="FKVisitaUsuarioCrea" Association="Self.FKVisitaUsuarioCrea">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Visita" EntitySet="Visita" />
+    </AssociationSet>
+    <AssociationSet Name="FKVisitaUsuarioModifica" Association="Self.FKVisitaUsuarioModifica">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Visita" EntitySet="Visita" />
+    </AssociationSet>
+    <AssociationSet Name="FKVisitaVisitante" Association="Self.FKVisitaVisitante">
+      <End Role="Visitante" EntitySet="Visitante" />
+      <End Role="Visita" EntitySet="Visita" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

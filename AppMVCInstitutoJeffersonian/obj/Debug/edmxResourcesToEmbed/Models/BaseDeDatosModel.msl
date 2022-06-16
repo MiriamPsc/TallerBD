@@ -1,0 +1,1496 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="InstitutoDeInvestigacionModelStoreContainer" CdmEntityContainer="InstitutoDeInvestigacionEntities">
+    <EntitySetMapping Name="Beneficiario">
+      <EntityTypeMapping TypeName="InstitutoDeInvestigacionModel.Beneficiario">
+        <MappingFragment StoreEntitySet="Beneficiario">
+          <ScalarProperty Name="idBeneficiario" ColumnName="idBeneficiario" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="rfc" ColumnName="rfc" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Caso">
+      <EntityTypeMapping TypeName="InstitutoDeInvestigacionModel.Caso">
+        <MappingFragment StoreEntitySet="Caso">
+          <ScalarProperty Name="idCaso" ColumnName="idCaso" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="fechaInicio" ColumnName="fechaInicio" />
+          <ScalarProperty Name="fechaCierre" ColumnName="fechaCierre" />
+          <ScalarProperty Name="idEquipo" ColumnName="idEquipo" />
+          <ScalarProperty Name="idEspecialidad" ColumnName="idEspecialidad" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Certificado">
+      <EntityTypeMapping TypeName="InstitutoDeInvestigacionModel.Certificado">
+        <MappingFragment StoreEntitySet="Certificado">
+          <ScalarProperty Name="idCertificado" ColumnName="idCertificado" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="idInstitucion" ColumnName="idInstitucion" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="ciudad" ColumnName="ciudad" />
+          <ScalarProperty Name="pais" ColumnName="pais" />
+          <ScalarProperty Name="idTipoCertificado" ColumnName="idTipoCertificado" />
+          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departamento">
+      <EntityTypeMapping TypeName="InstitutoDeInvestigacionModel.Departamento">
+        <MappingFragment StoreEntitySet="Departamento">
+          <ScalarProperty Name="idDepartamento" ColumnName="idDepartamento" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DepartamentoReactivo">
+      <EntityTypeMapping TypeName="InstitutoDeInvestigacionModel.DepartamentoReactivo">
+        <MappingFragment StoreEntitySet="DepartamentoReactivo">
+          <ScalarProperty Name="idDepartamentoReactivo" ColumnName="idDepartamentoReactivo" />
+          <ScalarProperty Name="idDepartamento" ColumnName="idDepartamento" />
+          <ScalarProperty Name="idReactivo" ColumnName="idReactivo" />
+          <ScalarProperty Name="lote" ColumnName="lote" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="fechaEmpaque" ColumnName="fechaEmpaque" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Donacion">
+      <EntityTypeMapping TypeName="InstitutoDeInvestigacionModel.Donacion">
+        <MappingFragment StoreEntitySet="Donacion">
+          <ScalarProperty Name="idDonacion" ColumnName="idDonacion" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+          <ScalarProperty Name="idBeneficiario" ColumnName="idBeneficiario" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DonacionInstitucion">
+      <EntityTypeMapping TypeName="InstitutoDeInvestigacionModel.DonacionInstitucion">
+        <MappingFragment StoreEntitySet="DonacionInstitucion">
+          <ScalarProperty Name="idDonacionInstitucion" ColumnName="idDonacionInstitucion" />
+          <ScalarProperty Name="idDonacion" ColumnName="idDonacion" />
+          <ScalarProperty Name="idInstitucion" ColumnName="idInstitucion" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Empleado">
+      <EntityTypeMapping TypeName="InstitutoDeInvestigacionModel.Empleado">
+        <MappingFragment StoreEntitySet="Empleado">
+          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+          <ScalarProperty Name="numero" ColumnName="numero" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellidoPaterno" ColumnName="apellidoPaterno" />
+          <ScalarProperty Name="apellidoMaterno" ColumnName="apellidoMaterno" />
+          <ScalarProperty Name="genero" ColumnName="genero" />
+          <ScalarProperty Name="ciudad" ColumnName="ciudad" />
+          <ScalarProperty Name="pais" ColumnName="pais" />
+          <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+          <ScalarProperty Name="rfc" ColumnName="rfc" />
+          <ScalarProperty Name="dni" ColumnName="dni" />
+          <ScalarProperty Name="idTipoEmpleado" ColumnName="idTipoEmpleado" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpleadoEquipo">
+      <EntityTypeMapping TypeName="InstitutoDeInvestigacionModel.EmpleadoEquipo">
+        <MappingFragment StoreEntitySet="EmpleadoEquipo">
+          <ScalarProperty Name="idEmpleadoEquipo" ColumnName="idEmpleadoEquipo" />
+          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+          <ScalarProperty Name="idEquipo" ColumnName="idEquipo" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpleadoEspecialidad">
+      <EntityTypeMapping TypeName="InstitutoDeInvestigacionModel.EmpleadoEspecialidad">
+        <MappingFragment StoreEntitySet="EmpleadoEspecialidad">
+          <ScalarProperty Name="idEmpleadoEspecialidad" ColumnName="idEmpleadoEspecialidad" />
+          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+          <ScalarProperty Name="idEspecialidad" ColumnName="idEspecialidad" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpleadoInstitucion">
+      <EntityTypeMapping TypeName="InstitutoDeInvestigacionModel.EmpleadoInstitucion">
+        <MappingFragment StoreEntitySet="EmpleadoInstitucion">
+          <ScalarProperty Name="idEmpleadoInstitucion" ColumnName="idEmpleadoInstitucion" />
+          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+          <ScalarProperty Name="idInstitucion" ColumnName="idInstitucion" />
+          <ScalarProperty Name="fechaInicio" ColumnName="fechaInicio" />
+          <ScalarProperty Name="fechaFinal" ColumnName="fechaFinal" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Equipo">
+      <EntityTypeMapping TypeName="InstitutoDeInvestigacionModel.Equipo">
+        <MappingFragment StoreEntitySet="Equipo">
+          <ScalarProperty Name="idEquipo" ColumnName="idEquipo" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Especialidad">
+      <EntityTypeMapping TypeName="InstitutoDeInvestigacionModel.Especialidad">
+        <MappingFragment StoreEntitySet="Especialidad">
+          <ScalarProperty Name="idEspecialidad" ColumnName="idEspecialidad" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="idDepartamento" ColumnName="idDepartamento" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Institucion">
+      <EntityTypeMapping TypeName="InstitutoDeInvestigacionModel.Institucion">
+        <MappingFragment StoreEntitySet="Institucion">
+          <ScalarProperty Name="idInstitucion" ColumnName="idInstitucion" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="ciudad" ColumnName="ciudad" />
+          <ScalarProperty Name="pais" ColumnName="pais" />
+          <ScalarProperty Name="idTipoInstitucion" ColumnName="idTipoInstitucion" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InstitucionEducativa">
+      <EntityTypeMapping TypeName="InstitutoDeInvestigacionModel.InstitucionEducativa">
+        <MappingFragment StoreEntitySet="InstitucionEducativa">
+          <ScalarProperty Name="idInstitucionEducativa" ColumnName="idInstitucionEducativa" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="ciudad" ColumnName="ciudad" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="pais" ColumnName="pais" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Instrumento">
+      <EntityTypeMapping TypeName="InstitutoDeInvestigacionModel.Instrumento">
+        <MappingFragment StoreEntitySet="Instrumento">
+          <ScalarProperty Name="idInstrumento" ColumnName="idInstrumento" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="idTipoInstrumento" ColumnName="idTipoInstrumento" />
+          <ScalarProperty Name="idDepartamento" ColumnName="idDepartamento" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mobiliario">
+      <EntityTypeMapping TypeName="InstitutoDeInvestigacionModel.Mobiliario">
+        <MappingFragment StoreEntitySet="Mobiliario">
+          <ScalarProperty Name="idMobiliario" ColumnName="idMobiliario" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="idTipoMobiliario" ColumnName="idTipoMobiliario" />
+          <ScalarProperty Name="idDepartamento" ColumnName="idDepartamento" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pase">
+      <EntityTypeMapping TypeName="InstitutoDeInvestigacionModel.Pase">
+        <MappingFragment StoreEntitySet="Pase">
+          <ScalarProperty Name="idPase" ColumnName="idPase" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="fechaInicio" ColumnName="fechaInicio" />
+          <ScalarProperty Name="fechaFinal" ColumnName="fechaFinal" />
+          <ScalarProperty Name="idTipoPase" ColumnName="idTipoPase" />
+          <ScalarProperty Name="idInstitucion" ColumnName="idInstitucion" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reactivo">
+      <EntityTypeMapping TypeName="InstitutoDeInvestigacionModel.Reactivo">
+        <MappingFragment StoreEntitySet="Reactivo">
+          <ScalarProperty Name="idReactivo" ColumnName="idReactivo" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="formula" ColumnName="formula" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reporte">
+      <EntityTypeMapping TypeName="InstitutoDeInvestigacionModel.Reporte">
+        <MappingFragment StoreEntitySet="Reporte">
+          <ScalarProperty Name="idReporte" ColumnName="idReporte" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="idCaso" ColumnName="idCaso" />
+          <ScalarProperty Name="fechaEntrega" ColumnName="fechaEntrega" />
+          <ScalarProperty Name="idEmpleadoEntrega" ColumnName="idEmpleadoEntrega" />
+          <ScalarProperty Name="idEmpleadoRecibe" ColumnName="idEmpleadoRecibe" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoCertificado">
+      <EntityTypeMapping TypeName="InstitutoDeInvestigacionModel.TipoCertificado">
+        <MappingFragment StoreEntitySet="TipoCertificado">
+          <ScalarProperty Name="idTipoCertificado" ColumnName="idTipoCertificado" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoEmpleado">
+      <EntityTypeMapping TypeName="InstitutoDeInvestigacionModel.TipoEmpleado">
+        <MappingFragment StoreEntitySet="TipoEmpleado">
+          <ScalarProperty Name="idTipoEmpleado" ColumnName="idTipoEmpleado" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="sueldoBase" ColumnName="sueldoBase" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoInstitucion">
+      <EntityTypeMapping TypeName="InstitutoDeInvestigacionModel.TipoInstitucion">
+        <MappingFragment StoreEntitySet="TipoInstitucion">
+          <ScalarProperty Name="idTipoInstitucion" ColumnName="idTipoInstitucion" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoInstrumento">
+      <EntityTypeMapping TypeName="InstitutoDeInvestigacionModel.TipoInstrumento">
+        <MappingFragment StoreEntitySet="TipoInstrumento">
+          <ScalarProperty Name="idTipoInstrumento" ColumnName="idTipoInstrumento" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoMobiliario">
+      <EntityTypeMapping TypeName="InstitutoDeInvestigacionModel.TipoMobiliario">
+        <MappingFragment StoreEntitySet="TipoMobiliario">
+          <ScalarProperty Name="idTipoMobiliario" ColumnName="idTipoMobiliario" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoPase">
+      <EntityTypeMapping TypeName="InstitutoDeInvestigacionModel.TipoPase">
+        <MappingFragment StoreEntitySet="TipoPase">
+          <ScalarProperty Name="idTipoPase" ColumnName="idTipoPase" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoVisita">
+      <EntityTypeMapping TypeName="InstitutoDeInvestigacionModel.TipoVisita">
+        <MappingFragment StoreEntitySet="TipoVisita">
+          <ScalarProperty Name="idTipoVisita" ColumnName="idTipoVisita" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="InstitutoDeInvestigacionModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellidoPaterno" ColumnName="apellidoPaterno" />
+          <ScalarProperty Name="apellidoMaterno" ColumnName="apellidoMaterno" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="clave" ColumnName="clave" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Visita">
+      <EntityTypeMapping TypeName="InstitutoDeInvestigacionModel.Visita">
+        <MappingFragment StoreEntitySet="Visita">
+          <ScalarProperty Name="idVisita" ColumnName="idVisita" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="idTipoVisita" ColumnName="idTipoVisita" />
+          <ScalarProperty Name="idVisitante" ColumnName="idVisitante" />
+          <ScalarProperty Name="idPase" ColumnName="idPase" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Visitante">
+      <EntityTypeMapping TypeName="InstitutoDeInvestigacionModel.Visitante">
+        <MappingFragment StoreEntitySet="Visitante">
+          <ScalarProperty Name="idVisitante" ColumnName="idVisitante" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellidoPaterno" ColumnName="apellidoPaterno" />
+          <ScalarProperty Name="apellidoMaterno" ColumnName="apellidoMaterno" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+          <ScalarProperty Name="dni" ColumnName="dni" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="BeneficiarioDonacion" FunctionName="InstitutoDeInvestigacionModel.Store.BeneficiarioDonacion">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.BeneficiarioDonacion_Result">
+          <ScalarProperty Name="Beneficiario" ColumnName="Beneficiario" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DonacionesOrden" FunctionName="InstitutoDeInvestigacionModel.Store.DonacionesOrden">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.DonacionesOrden_Result">
+          <ScalarProperty Name="Beneficiario" ColumnName="Beneficiario" />
+          <ScalarProperty Name="Donación" ColumnName="Donación" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="EmpleadoAños" FunctionName="InstitutoDeInvestigacionModel.Store.EmpleadoAños">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.EmpleadoAños_Result">
+          <ScalarProperty Name="Nombre_empleado" ColumnName="Nombre empleado" />
+          <ScalarProperty Name="Institucion" ColumnName="Institucion" />
+          <ScalarProperty Name="Años_que_han_pasado" ColumnName="Años que han pasado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="EmpleadoPuesto" FunctionName="InstitutoDeInvestigacionModel.Store.EmpleadoPuesto">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.EmpleadoPuesto_Result">
+          <ScalarProperty Name="Nombre_empleado" ColumnName="Nombre empleado" />
+          <ScalarProperty Name="Puesto" ColumnName="Puesto" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="EmpleadoSelectOrden" FunctionName="InstitutoDeInvestigacionModel.Store.EmpleadoSelectOrden">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.EmpleadoSelectOrden_Result">
+          <ScalarProperty Name="Nombre_empleado" ColumnName="Nombre empleado" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="MaximaDonacion" FunctionName="InstitutoDeInvestigacionModel.Store.MaximaDonacion">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.MaximaDonacion_Result">
+          <ScalarProperty Name="Beneficiario" ColumnName="Beneficiario" />
+          <ScalarProperty Name="Donación" ColumnName="Donación" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="MinimaDonacion" FunctionName="InstitutoDeInvestigacionModel.Store.MinimaDonacion">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.MinimaDonacion_Result">
+          <ScalarProperty Name="Beneficiario" ColumnName="Beneficiario" />
+          <ScalarProperty Name="Donación" ColumnName="Donación" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PrimeraVisitaVisitante" FunctionName="InstitutoDeInvestigacionModel.Store.PrimeraVisitaVisitante">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.PrimeraVisitaVisitante_Result">
+          <ScalarProperty Name="Nombre_visitante" ColumnName="Nombre visitante" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ReactivoSemanas" FunctionName="InstitutoDeInvestigacionModel.Store.ReactivoSemanas" />
+    <FunctionImportMapping FunctionImportName="SelectBeneficiario" FunctionName="InstitutoDeInvestigacionModel.Store.SelectBeneficiario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectBeneficiario_Result">
+          <ScalarProperty Name="idBeneficiario" ColumnName="idBeneficiario" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="rfc" ColumnName="rfc" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectCaso" FunctionName="InstitutoDeInvestigacionModel.Store.SelectCaso">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectCaso_Result">
+          <ScalarProperty Name="idCaso" ColumnName="idCaso" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="fechaInicio" ColumnName="fechaInicio" />
+          <ScalarProperty Name="fechaCierre" ColumnName="fechaCierre" />
+          <ScalarProperty Name="idEquipo" ColumnName="idEquipo" />
+          <ScalarProperty Name="idEspecialidad" ColumnName="idEspecialidad" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectCertificado" FunctionName="InstitutoDeInvestigacionModel.Store.SelectCertificado">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectCertificado_Result">
+          <ScalarProperty Name="idCertificado" ColumnName="idCertificado" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="idInstitucion" ColumnName="idInstitucion" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="ciudad" ColumnName="ciudad" />
+          <ScalarProperty Name="pais" ColumnName="pais" />
+          <ScalarProperty Name="idTipoCertificado" ColumnName="idTipoCertificado" />
+          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectDepartamento" FunctionName="InstitutoDeInvestigacionModel.Store.SelectDepartamento">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectDepartamento_Result">
+          <ScalarProperty Name="idDepartamento" ColumnName="idDepartamento" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectDepartamentoReactivo" FunctionName="InstitutoDeInvestigacionModel.Store.SelectDepartamentoReactivo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectDepartamentoReactivo_Result">
+          <ScalarProperty Name="idDepartamentoReactivo" ColumnName="idDepartamentoReactivo" />
+          <ScalarProperty Name="idDepartamento" ColumnName="idDepartamento" />
+          <ScalarProperty Name="idReactivo" ColumnName="idReactivo" />
+          <ScalarProperty Name="lote" ColumnName="lote" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="fechaEmpaque" ColumnName="fechaEmpaque" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectDonación" FunctionName="InstitutoDeInvestigacionModel.Store.SelectDonación" />
+    <FunctionImportMapping FunctionImportName="SelectDonacionInstitucion" FunctionName="InstitutoDeInvestigacionModel.Store.SelectDonacionInstitucion">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectDonacionInstitucion_Result">
+          <ScalarProperty Name="idDonacionInstitucion" ColumnName="idDonacionInstitucion" />
+          <ScalarProperty Name="idDonacion" ColumnName="idDonacion" />
+          <ScalarProperty Name="idInstitucion" ColumnName="idInstitucion" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectEmpleado" FunctionName="InstitutoDeInvestigacionModel.Store.SelectEmpleado">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectEmpleado_Result">
+          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+          <ScalarProperty Name="numero" ColumnName="numero" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellidoPaterno" ColumnName="apellidoPaterno" />
+          <ScalarProperty Name="apellidoMaterno" ColumnName="apellidoMaterno" />
+          <ScalarProperty Name="genero" ColumnName="genero" />
+          <ScalarProperty Name="ciudad" ColumnName="ciudad" />
+          <ScalarProperty Name="pais" ColumnName="pais" />
+          <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+          <ScalarProperty Name="rfc" ColumnName="rfc" />
+          <ScalarProperty Name="dni" ColumnName="dni" />
+          <ScalarProperty Name="idTipoEmpleado" ColumnName="idTipoEmpleado" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectEmpleadoEquipo" FunctionName="InstitutoDeInvestigacionModel.Store.SelectEmpleadoEquipo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectEmpleadoEquipo_Result">
+          <ScalarProperty Name="idEmpleadoEquipo" ColumnName="idEmpleadoEquipo" />
+          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+          <ScalarProperty Name="idEquipo" ColumnName="idEquipo" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectEmpleadoEspecialidad" FunctionName="InstitutoDeInvestigacionModel.Store.SelectEmpleadoEspecialidad">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectEmpleadoEspecialidad_Result">
+          <ScalarProperty Name="idEmpleadoEspecialidad" ColumnName="idEmpleadoEspecialidad" />
+          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+          <ScalarProperty Name="idEspecialidad" ColumnName="idEspecialidad" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectEmpleadoInstitucion" FunctionName="InstitutoDeInvestigacionModel.Store.SelectEmpleadoInstitucion">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectEmpleadoInstitucion_Result">
+          <ScalarProperty Name="idEmpleadoInstitucion" ColumnName="idEmpleadoInstitucion" />
+          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+          <ScalarProperty Name="idInstitucion" ColumnName="idInstitucion" />
+          <ScalarProperty Name="fechaInicio" ColumnName="fechaInicio" />
+          <ScalarProperty Name="fechaFinal" ColumnName="fechaFinal" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectEquipo" FunctionName="InstitutoDeInvestigacionModel.Store.SelectEquipo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectEquipo_Result">
+          <ScalarProperty Name="idEquipo" ColumnName="idEquipo" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectEspecialidad" FunctionName="InstitutoDeInvestigacionModel.Store.SelectEspecialidad">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectEspecialidad_Result">
+          <ScalarProperty Name="idEspecialidad" ColumnName="idEspecialidad" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="idDepartamento" ColumnName="idDepartamento" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectInstitucion" FunctionName="InstitutoDeInvestigacionModel.Store.SelectInstitucion">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectInstitucion_Result">
+          <ScalarProperty Name="idInstitucion" ColumnName="idInstitucion" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="ciudad" ColumnName="ciudad" />
+          <ScalarProperty Name="pais" ColumnName="pais" />
+          <ScalarProperty Name="idTipoInstitucion" ColumnName="idTipoInstitucion" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectInstitucionEducativa" FunctionName="InstitutoDeInvestigacionModel.Store.SelectInstitucionEducativa">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectInstitucionEducativa_Result">
+          <ScalarProperty Name="idInstitucionEducativa" ColumnName="idInstitucionEducativa" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="ciudad" ColumnName="ciudad" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="pais" ColumnName="pais" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectInstrumento" FunctionName="InstitutoDeInvestigacionModel.Store.SelectInstrumento">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectInstrumento_Result">
+          <ScalarProperty Name="idInstrumento" ColumnName="idInstrumento" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="idTipoInstrumento" ColumnName="idTipoInstrumento" />
+          <ScalarProperty Name="idDepartamento" ColumnName="idDepartamento" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectMobiliario" FunctionName="InstitutoDeInvestigacionModel.Store.SelectMobiliario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectMobiliario_Result">
+          <ScalarProperty Name="idMobiliario" ColumnName="idMobiliario" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="idTipoMobiliario" ColumnName="idTipoMobiliario" />
+          <ScalarProperty Name="idDepartamento" ColumnName="idDepartamento" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectPase" FunctionName="InstitutoDeInvestigacionModel.Store.SelectPase">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectPase_Result">
+          <ScalarProperty Name="idPase" ColumnName="idPase" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="fechaInicio" ColumnName="fechaInicio" />
+          <ScalarProperty Name="fechaFinal" ColumnName="fechaFinal" />
+          <ScalarProperty Name="idTipoPase" ColumnName="idTipoPase" />
+          <ScalarProperty Name="idInstitucion" ColumnName="idInstitucion" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectReactivo" FunctionName="InstitutoDeInvestigacionModel.Store.SelectReactivo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectReactivo_Result">
+          <ScalarProperty Name="idReactivo" ColumnName="idReactivo" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="formula" ColumnName="formula" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectReporte" FunctionName="InstitutoDeInvestigacionModel.Store.SelectReporte">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectReporte_Result">
+          <ScalarProperty Name="idReporte" ColumnName="idReporte" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="idCaso" ColumnName="idCaso" />
+          <ScalarProperty Name="fechaEntrega" ColumnName="fechaEntrega" />
+          <ScalarProperty Name="idEmpleadoEntrega" ColumnName="idEmpleadoEntrega" />
+          <ScalarProperty Name="idEmpleadoRecibe" ColumnName="idEmpleadoRecibe" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTipoCertificado" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTipoCertificado">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTipoCertificado_Result">
+          <ScalarProperty Name="idTipoCertificado" ColumnName="idTipoCertificado" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTipoEmpleado" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTipoEmpleado">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTipoEmpleado_Result">
+          <ScalarProperty Name="idTipoEmpleado" ColumnName="idTipoEmpleado" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="sueldoBase" ColumnName="sueldoBase" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTipoInstitucion" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTipoInstitucion">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTipoInstitucion_Result">
+          <ScalarProperty Name="idTipoInstitucion" ColumnName="idTipoInstitucion" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTipoInstrumento" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTipoInstrumento">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTipoInstrumento_Result">
+          <ScalarProperty Name="idTipoInstrumento" ColumnName="idTipoInstrumento" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTipoMobiliario" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTipoMobiliario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTipoMobiliario_Result">
+          <ScalarProperty Name="idTipoMobiliario" ColumnName="idTipoMobiliario" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTipoPase" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTipoPase">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTipoPase_Result">
+          <ScalarProperty Name="idTipoPase" ColumnName="idTipoPase" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTipoVisita" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTipoVisita">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTipoVisita_Result">
+          <ScalarProperty Name="idTipoVisita" ColumnName="idTipoVisita" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTodoBeneficiario" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTodoBeneficiario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTodoBeneficiario_Result">
+          <ScalarProperty Name="idBeneficiario" ColumnName="idBeneficiario" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="rfc" ColumnName="rfc" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTodoCaso" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTodoCaso">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTodoCaso_Result">
+          <ScalarProperty Name="idCaso" ColumnName="idCaso" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="fechaInicio" ColumnName="fechaInicio" />
+          <ScalarProperty Name="fechaCierre" ColumnName="fechaCierre" />
+          <ScalarProperty Name="idEquipo" ColumnName="idEquipo" />
+          <ScalarProperty Name="idEspecialidad" ColumnName="idEspecialidad" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTodoCertificado" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTodoCertificado">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTodoCertificado_Result">
+          <ScalarProperty Name="idCertificado" ColumnName="idCertificado" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="idInstitucion" ColumnName="idInstitucion" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="ciudad" ColumnName="ciudad" />
+          <ScalarProperty Name="pais" ColumnName="pais" />
+          <ScalarProperty Name="idTipoCertificado" ColumnName="idTipoCertificado" />
+          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTodoDepartamento" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTodoDepartamento">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTodoDepartamento_Result">
+          <ScalarProperty Name="idDepartamento" ColumnName="idDepartamento" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTodoDepartamentoReactivo" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTodoDepartamentoReactivo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTodoDepartamentoReactivo_Result">
+          <ScalarProperty Name="idDepartamentoReactivo" ColumnName="idDepartamentoReactivo" />
+          <ScalarProperty Name="idDepartamento" ColumnName="idDepartamento" />
+          <ScalarProperty Name="idReactivo" ColumnName="idReactivo" />
+          <ScalarProperty Name="lote" ColumnName="lote" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="fechaEmpaque" ColumnName="fechaEmpaque" />
+          <ScalarProperty Name="fechaCaducidad" ColumnName="fechaCaducidad" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTodoDonacion" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTodoDonacion">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTodoDonacion_Result">
+          <ScalarProperty Name="idDonacion" ColumnName="idDonacion" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+          <ScalarProperty Name="idBeneficiario" ColumnName="idBeneficiario" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTodoDonacionInstitucion" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTodoDonacionInstitucion">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTodoDonacionInstitucion_Result">
+          <ScalarProperty Name="idDonacionInstitucion" ColumnName="idDonacionInstitucion" />
+          <ScalarProperty Name="idDonacion" ColumnName="idDonacion" />
+          <ScalarProperty Name="idInstitucion" ColumnName="idInstitucion" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTodoEmpleado" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTodoEmpleado">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTodoEmpleado_Result">
+          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+          <ScalarProperty Name="numero" ColumnName="numero" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellidoPaterno" ColumnName="apellidoPaterno" />
+          <ScalarProperty Name="apellidoMaterno" ColumnName="apellidoMaterno" />
+          <ScalarProperty Name="genero" ColumnName="genero" />
+          <ScalarProperty Name="ciudad" ColumnName="ciudad" />
+          <ScalarProperty Name="pais" ColumnName="pais" />
+          <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+          <ScalarProperty Name="rfc" ColumnName="rfc" />
+          <ScalarProperty Name="dni" ColumnName="dni" />
+          <ScalarProperty Name="idTipoEmpleado" ColumnName="idTipoEmpleado" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTodoEmpleadoEquipo" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTodoEmpleadoEquipo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTodoEmpleadoEquipo_Result">
+          <ScalarProperty Name="idEmpleadoEquipo" ColumnName="idEmpleadoEquipo" />
+          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+          <ScalarProperty Name="idEquipo" ColumnName="idEquipo" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTodoEmpleadoEspecialidad" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTodoEmpleadoEspecialidad">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTodoEmpleadoEspecialidad_Result">
+          <ScalarProperty Name="idEmpleadoEspecialidad" ColumnName="idEmpleadoEspecialidad" />
+          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+          <ScalarProperty Name="idEspecialidad" ColumnName="idEspecialidad" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTodoEmpleadoInstitucion" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTodoEmpleadoInstitucion">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTodoEmpleadoInstitucion_Result">
+          <ScalarProperty Name="idEmpleadoInstitucion" ColumnName="idEmpleadoInstitucion" />
+          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+          <ScalarProperty Name="idInstitucion" ColumnName="idInstitucion" />
+          <ScalarProperty Name="fechaInicio" ColumnName="fechaInicio" />
+          <ScalarProperty Name="fechaFinal" ColumnName="fechaFinal" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTodoEquipo" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTodoEquipo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTodoEquipo_Result">
+          <ScalarProperty Name="idEquipo" ColumnName="idEquipo" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTodoEspecialidad" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTodoEspecialidad">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTodoEspecialidad_Result">
+          <ScalarProperty Name="idEspecialidad" ColumnName="idEspecialidad" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="idDepartamento" ColumnName="idDepartamento" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTodoInstitucion" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTodoInstitucion">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTodoInstitucion_Result">
+          <ScalarProperty Name="idInstitucion" ColumnName="idInstitucion" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="ciudad" ColumnName="ciudad" />
+          <ScalarProperty Name="pais" ColumnName="pais" />
+          <ScalarProperty Name="idTipoInstitucion" ColumnName="idTipoInstitucion" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTodoInstitucionEducativa" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTodoInstitucionEducativa">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTodoInstitucionEducativa_Result">
+          <ScalarProperty Name="idInstitucionEducativa" ColumnName="idInstitucionEducativa" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="ciudad" ColumnName="ciudad" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="pais" ColumnName="pais" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTodoInstrumento" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTodoInstrumento">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTodoInstrumento_Result">
+          <ScalarProperty Name="idInstrumento" ColumnName="idInstrumento" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="idTipoInstrumento" ColumnName="idTipoInstrumento" />
+          <ScalarProperty Name="idDepartamento" ColumnName="idDepartamento" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTodoMobiliario" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTodoMobiliario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTodoMobiliario_Result">
+          <ScalarProperty Name="idMobiliario" ColumnName="idMobiliario" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="idTipoMobiliario" ColumnName="idTipoMobiliario" />
+          <ScalarProperty Name="idDepartamento" ColumnName="idDepartamento" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTodoPase" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTodoPase">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTodoPase_Result">
+          <ScalarProperty Name="idPase" ColumnName="idPase" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="fechaInicio" ColumnName="fechaInicio" />
+          <ScalarProperty Name="fechaFinal" ColumnName="fechaFinal" />
+          <ScalarProperty Name="idTipoPase" ColumnName="idTipoPase" />
+          <ScalarProperty Name="idInstitucion" ColumnName="idInstitucion" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTodoReactivo" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTodoReactivo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTodoReactivo_Result">
+          <ScalarProperty Name="idReactivo" ColumnName="idReactivo" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="formula" ColumnName="formula" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTodoReporte" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTodoReporte">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTodoReporte_Result">
+          <ScalarProperty Name="idReporte" ColumnName="idReporte" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="idCaso" ColumnName="idCaso" />
+          <ScalarProperty Name="fechaEntrega" ColumnName="fechaEntrega" />
+          <ScalarProperty Name="idEmpleadoEntrega" ColumnName="idEmpleadoEntrega" />
+          <ScalarProperty Name="idEmpleadoRecibe" ColumnName="idEmpleadoRecibe" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTodoTipoCertificado" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTodoTipoCertificado">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTodoTipoCertificado_Result">
+          <ScalarProperty Name="idTipoCertificado" ColumnName="idTipoCertificado" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTodoTipoEmpleado" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTodoTipoEmpleado">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTodoTipoEmpleado_Result">
+          <ScalarProperty Name="idTipoEmpleado" ColumnName="idTipoEmpleado" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="sueldoBase" ColumnName="sueldoBase" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTodoTipoInstitucion" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTodoTipoInstitucion">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTodoTipoInstitucion_Result">
+          <ScalarProperty Name="idTipoInstitucion" ColumnName="idTipoInstitucion" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTodoTipoInstrumento" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTodoTipoInstrumento">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTodoTipoInstrumento_Result">
+          <ScalarProperty Name="idTipoInstrumento" ColumnName="idTipoInstrumento" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTodoTipoMobiliario" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTodoTipoMobiliario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTodoTipoMobiliario_Result">
+          <ScalarProperty Name="idTipoMobiliario" ColumnName="idTipoMobiliario" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTodoTipoPase" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTodoTipoPase">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTodoTipoPase_Result">
+          <ScalarProperty Name="idTipoPase" ColumnName="idTipoPase" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTodoTipoVisita" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTodoTipoVisita">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTodoTipoVisita_Result">
+          <ScalarProperty Name="idTipoVisita" ColumnName="idTipoVisita" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTodoUsuario" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTodoUsuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTodoUsuario_Result">
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellidoPaterno" ColumnName="apellidoPaterno" />
+          <ScalarProperty Name="apellidoMaterno" ColumnName="apellidoMaterno" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="clave" ColumnName="clave" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTodoVisita" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTodoVisita">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTodoVisita_Result">
+          <ScalarProperty Name="idVisita" ColumnName="idVisita" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="idTipoVisita" ColumnName="idTipoVisita" />
+          <ScalarProperty Name="idVisitante" ColumnName="idVisitante" />
+          <ScalarProperty Name="idPase" ColumnName="idPase" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectTodoVisitante" FunctionName="InstitutoDeInvestigacionModel.Store.SelectTodoVisitante">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectTodoVisitante_Result">
+          <ScalarProperty Name="idVisitante" ColumnName="idVisitante" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellidoPaterno" ColumnName="apellidoPaterno" />
+          <ScalarProperty Name="apellidoMaterno" ColumnName="apellidoMaterno" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+          <ScalarProperty Name="dni" ColumnName="dni" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectUsuario" FunctionName="InstitutoDeInvestigacionModel.Store.SelectUsuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectUsuario_Result">
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellidoPaterno" ColumnName="apellidoPaterno" />
+          <ScalarProperty Name="apellidoMaterno" ColumnName="apellidoMaterno" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="clave" ColumnName="clave" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectVisita" FunctionName="InstitutoDeInvestigacionModel.Store.SelectVisita">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectVisita_Result">
+          <ScalarProperty Name="idVisita" ColumnName="idVisita" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="idTipoVisita" ColumnName="idTipoVisita" />
+          <ScalarProperty Name="idVisitante" ColumnName="idVisitante" />
+          <ScalarProperty Name="idPase" ColumnName="idPase" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectVisitante" FunctionName="InstitutoDeInvestigacionModel.Store.SelectVisitante">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.SelectVisitante_Result">
+          <ScalarProperty Name="idVisitante" ColumnName="idVisitante" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellidoPaterno" ColumnName="apellidoPaterno" />
+          <ScalarProperty Name="apellidoMaterno" ColumnName="apellidoMaterno" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+          <ScalarProperty Name="dni" ColumnName="dni" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TotalDonaciones" FunctionName="InstitutoDeInvestigacionModel.Store.TotalDonaciones" />
+    <FunctionImportMapping FunctionImportName="TotalEmpleados" FunctionName="InstitutoDeInvestigacionModel.Store.TotalEmpleados" />
+    <FunctionImportMapping FunctionImportName="UltimaVisitaVisitante" FunctionName="InstitutoDeInvestigacionModel.Store.UltimaVisitaVisitante">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.UltimaVisitaVisitante_Result">
+          <ScalarProperty Name="Nombre_visitante" ColumnName="Nombre visitante" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="VisitantesSelectOrden" FunctionName="InstitutoDeInvestigacionModel.Store.VisitantesSelectOrden">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.VisitantesSelectOrden_Result">
+          <ScalarProperty Name="Nombre_visitante" ColumnName="Nombre visitante" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="VisitanteVisita" FunctionName="InstitutoDeInvestigacionModel.Store.VisitanteVisita">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.VisitanteVisita_Result">
+          <ScalarProperty Name="Nombre_visitante" ColumnName="Nombre visitante" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="VisitasDia" FunctionName="InstitutoDeInvestigacionModel.Store.VisitasDia">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstitutoDeInvestigacionModel.VisitasDia_Result">
+          <ScalarProperty Name="idVisita" ColumnName="idVisita" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="idTipoVisita" ColumnName="idTipoVisita" />
+          <ScalarProperty Name="idVisitante" ColumnName="idVisitante" />
+          <ScalarProperty Name="idPase" ColumnName="idPase" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idUsuarioCrea" ColumnName="idUsuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="idUsuarioModifica" ColumnName="idUsuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

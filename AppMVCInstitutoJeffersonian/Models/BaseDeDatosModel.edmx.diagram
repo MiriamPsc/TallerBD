@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3b360d3e6b654b81ad728261d5de5659" Name="Diagram1">
+        <EntityTypeShape EntityType="InstitutoDeInvestigacionModel.Beneficiario" Width="1.5" PointX="3" PointY="24.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoDeInvestigacionModel.Caso" Width="1.5" PointX="5.25" PointY="47.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoDeInvestigacionModel.Certificado" Width="1.5" PointX="5.25" PointY="53.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoDeInvestigacionModel.Departamento" Width="1.5" PointX="3" PointY="38.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoDeInvestigacionModel.DepartamentoReactivo" Width="1.5" PointX="8.25" PointY="50" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoDeInvestigacionModel.Donacion" Width="1.5" PointX="5.25" PointY="38.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoDeInvestigacionModel.DonacionInstitucion" Width="1.5" PointX="10.5" PointY="50.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoDeInvestigacionModel.Empleado" Width="1.5" PointX="11.25" PointY="56.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoDeInvestigacionModel.EmpleadoEquipo" Width="1.5" PointX="13.5" PointY="55.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoDeInvestigacionModel.EmpleadoEspecialidad" Width="1.5" PointX="13.5" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoDeInvestigacionModel.EmpleadoInstitucion" Width="1.5" PointX="16.5" PointY="56" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoDeInvestigacionModel.Equipo" Width="1.5" PointX="3" PointY="49.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoDeInvestigacionModel.Especialidad" Width="1.5" PointX="8.25" PointY="43.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoDeInvestigacionModel.Institucion" Width="1.5" PointX="8.25" PointY="61.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoDeInvestigacionModel.InstitucionEducativa" Width="1.5" PointX="3" PointY="58.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoDeInvestigacionModel.Instrumento" Width="1.5" PointX="5.25" PointY="58.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoDeInvestigacionModel.Mobiliario" Width="1.5" PointX="8.25" PointY="56.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoDeInvestigacionModel.Pase" Width="1.5" PointX="10.5" PointY="64.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoDeInvestigacionModel.Reactivo" Width="1.5" PointX="3" PointY="62.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoDeInvestigacionModel.Reporte" Width="1.5" PointX="16.5" PointY="50.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoDeInvestigacionModel.TipoCertificado" Width="1.5" PointX="3" PointY="66.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoDeInvestigacionModel.TipoEmpleado" Width="1.5" PointX="3" PointY="70.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoDeInvestigacionModel.TipoInstitucion" Width="1.5" PointX="3" PointY="74.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoDeInvestigacionModel.TipoInstrumento" Width="1.5" PointX="3" PointY="78.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoDeInvestigacionModel.TipoMobiliario" Width="1.5" PointX="3" PointY="81.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoDeInvestigacionModel.TipoPase" Width="1.5" PointX="3" PointY="85.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoDeInvestigacionModel.TipoVisita" Width="1.5" PointX="3" PointY="89.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoDeInvestigacionModel.Usuario" Width="1.5" PointX="0.75" PointY="42" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoDeInvestigacionModel.Visita" Width="1.5" PointX="12.75" PointY="67.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstitutoDeInvestigacionModel.Visitante" Width="1.5" PointX="3" PointY="92.875" IsExpanded="true" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKBeneficiarioUsuarioCrea" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKBeneficiarioUsuarioModifica" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKDonacionBeneficiario" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKCasoEquipo" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKCasoEspecialidad" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKCasoUsuarioCrea" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKCasoUsuarioModifica" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKReporteCaso" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKCertificadoEmpleado" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKCertificadoInstitucionEducativa" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKCertificadoTipoCertificado" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKCertificadoUsuarioCrea" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKCertificadoUsuarioModifica" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKDepartamentoReactivoDepartamento" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKDepartamentoUsuarioCrea" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKDepartamentoUsuarioModifica" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKEspecialidadDepartamento" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKInstrumentoDepartamento" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKMobiliarioDepartamento" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKDepartamentoReactivoReactivo" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKDepartamentoReactivoUsuarioCrea" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKDepartamentoReactivoUsuarioModifica" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKDonacionInstitucionDonacion" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKDonacionUsuarioCrea" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKDonacionUsuarioModifica" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKDonacionInstitucionInstitucion" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKDonacionInstitucionUsuarioCrea" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKDonacionInstitucionUsuarioModifica" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKEmpleadoEquipoEmpleado" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKEmpleadoEspecialidadEmpleado" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKEmpleadoInstitucionEmpleado" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKEmpleadoTipoEmpleado" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKEmpleadoUsuarioCrea" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKEmpleadoUsuarioModifica" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKReporteEmpleadoEntrega" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKReporteEmpleadoRecibe" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKEmpleadoEquipoEquipo" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKEmpleadoEquipoUsuarioCrea" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKEmpleadoEquipoUsuarioModifica" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKEmpleadoEspecialidadEspecialidad" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKEmpleadoEspecialidadUsuarioCrea" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKEmpleadoEspecialidadUsuarioModifica" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKEmpleadoInstitucionInstitucion" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKEmpleadoInstitucionUsuarioCrea" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKEmpleadoInstitucionUsuarioModifica" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKEquipoUsuarioCrea" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKEquipoUsuarioModifica" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKEspecialidadUsuarioCrea" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKEspecialidadUsuarioModifica" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKInstitucionTipoInstitucion" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKInstitucionUsuarioCrea" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKInstitucionUsuarioModifica" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKPaseInstitucion" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKInstitucionEducativaUsuarioCrea" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKInstitucionEducativaUsuarioModifica" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKInstrumentoTipoInstrumento" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKInstrumentoUsuarioCrea" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKInstrumentoUsuarioModifica" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKMobiliarioTipoMobiliario" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKMobiliarioUsuarioCrea" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKMobiliarioUsuarioModifica" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKPaseTipoPase" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKPaseUsuarioCrea" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKPaseUsuarioModifica" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKVisitaPase" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKReactivoUsuarioCrea" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKReactivoUsuarioModifica" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKReporteUsuarioCrea" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKReporteUsuarioModifica" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKTipoCertificadoUsuarioCrea" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKTipoCertificadoUsuarioModifica" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKTipoEmpleadoUsuarioCrea" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKTipoEmpleadoUsuarioModifica" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKTipoInstitucionUsuarioCrea" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKTipoInstitucionUsuarioModifica" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKTipoInstrumentoUsuarioCrea" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKTipoInstrumentoUsuarioModifica" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKTipoMobiliarioUsuarioCrea" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKTipoMobiliarioUsuarioModifica" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKTipoPaseUsuarioCrea" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKTipoPaseUsuarioModifica" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKTipoVisitaUsuarioCrea" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKTipoVisitaUsuarioModifica" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKVisitaTipoVisita" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKUsuarioUsuarioCrea" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKUsuarioUsuarioModifica" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKVisitanteUsuarioCrea" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKVisitanteUsuarioModifica" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKVisitaUsuarioCrea" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKVisitaUsuarioModifica" ManuallyRouted="false" />
+        <AssociationConnector Association="InstitutoDeInvestigacionModel.FKVisitaVisitante" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

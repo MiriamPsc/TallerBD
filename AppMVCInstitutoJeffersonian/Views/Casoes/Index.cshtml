@@ -1,0 +1,93 @@
+﻿@model IEnumerable<AppMVCInstitutoJeffersonian.Models.Caso>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaInicio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaCierre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaCrea)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaModifica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Equipo.codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Especialidad.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuario.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuario1.nombre)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaInicio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaCierre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaCrea)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaModifica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Equipo.codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Especialidad.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuario.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuario1.nombre)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idCaso }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idCaso }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idCaso })
+        </td>
+    </tr>
+}
+
+</table>
